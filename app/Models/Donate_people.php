@@ -3,8 +3,14 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Donate_people extends Model {
+class Donate_people extends Model
+{
 
-	//
+    protected $table = 'donate_people';
 
+    public function getActive()
+    {
+        return $this->get();
+
+    }
 }
