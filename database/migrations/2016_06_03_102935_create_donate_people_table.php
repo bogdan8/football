@@ -10,8 +10,8 @@ class CreateDonatePeopleTable extends Migration {
 		Schema::create('donate_people', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('title');
-			$table->integer('collected_money');
-			$table->integer('need_money');
+			$table->date('date');
+			$table->integer('count_money');
 			$table->timestamps();
 		});
 	}
