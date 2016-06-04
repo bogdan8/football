@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class News_photo extends Model {
+class News_photo extends Model
+{
 
     protected $table = 'news_photo';
 
@@ -11,11 +12,14 @@ class News_photo extends Model {
         return $this->belongsTo('App\Models\News');
     }
 
-
     public function getActive()
     {
-        return $this->get();
+        return $this->published()->get();
+    }
 
+    public function scopePublished($query)
+    {
+        $query->where(['active' => '1']);
     }
 
 }

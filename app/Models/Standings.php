@@ -18,6 +18,11 @@ class Standings extends Model
 
     public function getActive()
     {
-        return $this->get();
+        return $this->published()->get();
+    }
+
+    public function scopePublished($query)
+    {
+        $query->where(['active' => '1']);
     }
 }

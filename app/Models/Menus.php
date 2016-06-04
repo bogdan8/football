@@ -9,8 +9,13 @@ class Menus extends Model
 
     public function getActive()
     {
-        return $this->get();
+        return $this->orderBy('weight')->published()->get();
 
+    }
+
+    public function scopePublished($query)
+    {
+        $query->where(['active' => '1']);
     }
 
 }
