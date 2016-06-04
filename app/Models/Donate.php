@@ -7,9 +7,9 @@ class Donate extends Model
 
     protected $table = 'donate';
 
-    public function getActive()
+    public function firstActive()
     {
-        return $this->get();
+        return $this->first();
 
     }
 

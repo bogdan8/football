@@ -17,6 +17,16 @@ class News extends Model
         return $this->published()->get();
     }
 
+    public function getActiveWithLimit()
+    {
+        return $this->published()->take(3)->get();
+    }
+
+    public function getBySlug($slug)
+    {
+        return $this->where(['slug' => $slug])->first();
+    }
+
     public function scopePublished($query)
     {
         $query->where(['active' => '1']);
