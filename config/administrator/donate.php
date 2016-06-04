@@ -17,11 +17,11 @@ return [
             'title' => 'Назва',
         ],
         'collected_money' => [
-            'type' => 'number',
+            'type' => 'text',
             'title' => 'Зібрано грошей',
         ],
         'need_money' => [
-            'type' => 'number',
+            'type' => 'text',
             'title' => 'Потрібно всього грошей',
         ],
     ],

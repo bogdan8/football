@@ -40,13 +40,17 @@ return [
             'title' => 'Текст',
         ],
         'image' => [
-            'title' => 'картинка',
+            'title' => 'Картинка',
             'type' => 'image',
             'location' => public_path() . '/uploads/news/original/',
             'sizes' => [
                 [500, 500, 'auto', public_path() . '/uploads/news/medium/', 100],
                 [100, 100, 'auto', public_path() . '/uploads/news/small/', 100],
             ],
+        ],
+        'video' => [
+            'type' => 'wysiwyg',
+            'title' => 'Відео',
         ],
     ],
     'filters' => array(

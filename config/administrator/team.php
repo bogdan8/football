@@ -21,7 +21,7 @@ return [
             'type' => 'relationship',
             'name_field' => 'title',
         ],
-        'image' => [
+        'logotype' => [
             'title' => 'Картинка',
             'type' => 'image',
             'location' => public_path() . '/uploads/team_logotype/original/',

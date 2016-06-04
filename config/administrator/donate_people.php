@@ -14,7 +14,7 @@ return [
     'edit_fields' => [
         'title' => [
             'type' => 'text',
-            'title' => 'Назва',
+            'title' => 'Імя та фамілія',
         ],
         'date' => [
             'type' => 'date',

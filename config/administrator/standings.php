@@ -1,7 +1,7 @@
 <?php
 return [
     'title' => 'Турнірна таблиця',
-    'single' => 'матч',
+    'single' => 'команду',
     'model' => 'App\Models\Standings',
     'columns' => [
         'id' => [
@@ -46,13 +46,13 @@ return [
             'type' => 'number',
             'title' => 'Кількість забитих голів',
         ],
-        'count_goals_missing' => [
+        'count_missing' => [
             'type' => 'number',
             'title' => 'Кількість пропущених голів',
         ],
         'difference' => [
             'type' => 'text',
-            'title' => 'Різниця',
+            'title' => 'Різниця писати так(+22 або - 22)',
         ],
         'points' => [
             'type' => 'number',
