@@ -7,7 +7,7 @@ class IndexController extends MainController
 
     public function index()
     {
-        return view('pages.index' , $this->data);
-	}
+        return view('pages.index', $this->data);
+    }
 
 }
