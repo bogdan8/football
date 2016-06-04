@@ -21,6 +21,16 @@ class Standings extends Model
         return $this->published()->get();
     }
 
+    public function getActiveAdult()
+    {
+        return $this->published()->where(['adult_id' => '1'])->get();
+    }
+
+    public function getActiveYoung()
+    {
+        return $this->published()->where(['adult_id' => '2'])->get();
+    }
+
     public function scopePublished($query)
     {
         $query->where(['active' => '1']);
