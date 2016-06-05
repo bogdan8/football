@@ -11,9 +11,9 @@
     }
 
     .title {
-        color: #4CAE4C;
+        color: black;
         font-size: 72px;
-        margin-bottom: 70px;
+        margin-top: 200px;
     }
 </style>
 <div class="container">

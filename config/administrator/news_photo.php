@@ -35,8 +35,8 @@ return [
             ],
         ],
         'image_url' => [
-            'title' => 'Посилання на картинку',
-            'type' => 'wysiwyg',
+            'title' => 'Посилання на картинку в такому вигляді (http://cs6419.vk.me/v62/5/ZowIVLM.jpg)',
+            'type' => 'text',
         ],
         'title' => [
             'type' => 'text',
