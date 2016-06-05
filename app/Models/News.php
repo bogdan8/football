@@ -17,9 +17,14 @@ class News extends Model
         return $this->published()->get();
     }
 
+    public function getActiveWithPaginate()
+    {
+        return $this->published()->paginate(1);
+    }
+
     public function getActiveWithLimit()
     {
-        return $this->published()->take(3)->get();
+        return $this->published()->take(1)->get();
     }
 
     public function getBySlug($slug)

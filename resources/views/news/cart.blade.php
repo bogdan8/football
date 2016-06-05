@@ -10,7 +10,8 @@
             width: 500px;
             height: 500px;
         }
-        .video{
+
+        .video {
             height: 200px;
             width: 300px;
         }
@@ -18,12 +19,14 @@
     <pre>
     <h4>{{$cart->title}}</h4>
     Назва: {!! $cart->title !!}
-    Дата: {!! $cart->date_news !!}
-    Текст: {!! $cart->body !!}
-    середня картинка<img width="50px" height="50px" src="/uploads/news/medium/{{$cart->image}}"/>
-    оригіна<img width="50px" height="50px" src="/uploads/news/original/{{$cart->image}}"/>
-    маленька картинка <img width="50px" height="50px" src="/uploads/news/small/{{$cart->image}}"/><br/>
-    Відео:
+        Дата: {!! $cart->date_news !!}
+        Текст: {!! $cart->body !!}
+        @if(!empty($cart->image))
+            середня картинка<img width="50px" height="50px" src="/uploads/news/medium/{{$cart->image}}"/>
+            оригіна<img width="50px" height="50px" src="/uploads/news/original/{{$cart->image}}"/>
+            маленька картинка <img width="50px" height="50px" src="/uploads/news/small/{{$cart->image}}"/><br/>
+        @endif
+        Відео:
     <div class="video">{!! $cart->video !!}</div>
     </pre>
 
