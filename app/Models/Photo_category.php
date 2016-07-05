@@ -17,6 +17,11 @@ class Photo_category extends Model
         return $this->published()->get();
     }
 
+    public function getBySlug($title)
+    {
+        return $this->where(['title' => $title])->first();
+    }
+
     public function scopePublished($query)
     {
         $query->where(['active' => '1']);
