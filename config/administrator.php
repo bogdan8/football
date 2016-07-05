@@ -78,10 +78,16 @@ return array(
             'donate',
             'donate_people',
         ],
-        'adult',
-        'matches_played',
-        'standings',
-        'team',
+        'Про команди' => [
+            'adult',
+            'matches_played',
+            'standings',
+            'team',
+        ],
+        'Фото' => [
+            'photo_category',
+            'gallery'
+        ],
     ),
 
     /**
