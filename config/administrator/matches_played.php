@@ -10,6 +10,28 @@ return [
         'active' => [
             'title' => 'Показувати чи ні',
         ],
+        'tour' => [
+            'type' => 'number',
+            'title' => 'Тур',
+        ],
+        'date_played' => [
+            'type' => 'date',
+            'title' => 'Дата гри',
+            'date_format' => 'yy-mm-dd', //optional, will default to this value
+        ],
+        'title_one_team' => [
+            'title' => 'Перша команда',
+        ],
+        'count_one_team' => [
+            'title' => 'Перша',
+        ],
+        'count_second_team' => [
+            'title' => 'Друга',
+        ],
+        'title_second_team' => [
+            'title' => 'Друга команда',
+        ],
+
     ],
     'edit_fields' => [
         'active' => [

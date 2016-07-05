@@ -10,6 +10,10 @@ return [
         'active' => [
             'title' => 'Показувати чи ні',
         ],
+        'title' => [
+            'type' => 'text',
+            'title' => 'Назва команди',
+        ],
     ],
     'edit_fields' => [
         'active' => [
