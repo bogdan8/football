@@ -89,7 +89,8 @@ return array(
             'gallery'
         ],
         'КФС' => [
-            'kfc_spending'
+            'kfc_spending',
+            'kfc_fundraiser'
         ]
     ),
 

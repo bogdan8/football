@@ -1,8 +1,8 @@
 <?php
 return [
-    'title' => 'КФС витрати',
-    'single' => 'витрати',
-    'model' => 'App\Models\Kfc_spending',
+    'title' => 'КФС збір коштів',
+    'single' => 'збір коштів',
+    'model' => 'App\Models\Kfc_fundraiser',
     'columns' => [
         'id' => [
             'title' => 'Індифікатор',
@@ -10,7 +10,7 @@ return [
         'active' => [
             'title' => 'Показувати чи ні',
         ],
-        'goods_or_services' => [
+        'initials' => [
             'title' => 'Назва',
         ],
         'sum' => [
@@ -22,9 +22,9 @@ return [
             'type' => 'bool',
             'title' => 'Показувати',
         ],
-        'goods_or_services' => [
+        'initials' => [
             'type' => 'text',
-            'title' => 'Товар або послуга',
+            'title' => 'Прізвище імя побатькові',
         ],
         'date' => [
             'type' => 'date',
@@ -37,8 +37,8 @@ return [
         ],
     ],
     'filters' => array(
-        'goods_or_services' => array(
-            'title' => 'Товар або послуга',
+        'initials' => array(
+            'title' => 'Прізвище імя побатькові',
         ),
     ),
     'form_width' => 500,
