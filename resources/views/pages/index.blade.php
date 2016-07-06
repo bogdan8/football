@@ -3,10 +3,12 @@
 
     <h4>Збір грошей на спортивний майданчик</h4>
     <pre>
-        {{$donate->title}}
-        {{$donate->collected_money}} - зібрано
-        {{$donate->need_money}} - потрібно
-        відсоток:{{$interest}}%
+        @if ($donate)
+            {{$donate->title}}
+            {{$donate->collected_money}} - зібрано
+            {{$donate->need_money}} - потрібно
+            відсоток:{{$interest}}%
+        @endif
     </pre>
     <h4>Новини</h4>
     <pre>
@@ -51,7 +53,8 @@
             Старі або діти:{{$item->adult->title}}
             Команда: {!! $item->team->title !!}
             оригіна<img width="50px" height="50px" src="/uploads/team_logotype/original/{{$item->team->logotype}}"/>
-            маленький логотип <img width="50px" height="50px" src="/uploads/team_logotype/small/{{$item->team->logotype}}"/>
+            маленький логотип <img width="50px" height="50px"
+                                   src="/uploads/team_logotype/small/{{$item->team->logotype}}"/>
             Кількість ігор: {!! $item->count_games !!}
             Кількість перемог: {!! $item->count_win !!}
             Кількість нічиїх: {!! $item->count_draw !!}
@@ -68,7 +71,8 @@
             Старі або діти:{{$item->adult->title}}
             Команда: {!! $item->team->title !!}
             оригіна<img width="50px" height="50px" src="/uploads/team_logotype/original/{{$item->team->logotype}}"/>
-            маленький логотип <img width="50px" height="50px" src="/uploads/team_logotype/small/{{$item->team->logotype}}"/>
+            маленький логотип <img width="50px" height="50px"
+                                   src="/uploads/team_logotype/small/{{$item->team->logotype}}"/>
             Кількість ігор: {!! $item->count_games !!}
             Кількість перемог: {!! $item->count_win !!}
             Кількість нічиїх: {!! $item->count_draw !!}

@@ -88,6 +88,9 @@ return array(
             'photo_category',
             'gallery'
         ],
+        'КФС' => [
+            'kfc_spending'
+        ]
     ),
 
     /**
