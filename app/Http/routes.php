@@ -16,6 +16,7 @@ Route::group(
     function () {
         Route::get('spending', ['as' => 'spending', 'uses' => 'KfcController@spending']);
         Route::get('fundraiser', ['as' => 'spending', 'uses' => 'KfcController@fundraiser']);
+        Route::get('list_of_candidates', ['as' => 'spending', 'uses' => 'KfcController@list_of_candidates']);
     });
 /* kfc */
 

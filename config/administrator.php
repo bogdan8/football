@@ -91,7 +91,9 @@ return array(
         ],
         'КФС' => [
             'kfc_spending',
-            'kfc_fundraiser'
+            'kfc_fundraiser',
+            'kfc_list_of_candidates_year',
+            'kfc_list_of_candidates_people',
         ]
     ),
 

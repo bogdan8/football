@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Models\Kfc_fundraiser;
+use App\Models\Kfc_list_of_candidates_year;
 use App\Models\Kfc_spending;
 
 class KfcController extends MainController
@@ -24,4 +25,10 @@ class KfcController extends MainController
         return view('kfc.fundraiser', $this->data);
     }
 
+    public function list_of_candidates(Kfc_list_of_candidates_year $candidates_year)
+    {
+        $this->data['candidates_year'] = $candidates_year->getActive();
+
+        return view('kfc.list_of_candidates', $this->data);
+    }
 }
