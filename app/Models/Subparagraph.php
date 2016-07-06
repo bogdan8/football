@@ -2,14 +2,14 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Menus extends Model
+class Subparagraph extends Model
 {
 
-    protected $table = 'menus';
+    protected $table = 'subparagraph';
 
-    public function subparagraph()
+    public function menus()
     {
-        return $this->hasMany('App\Models\Subparagraph');
+        return $this->belongsTo('App\Models\Menus');
     }
 
     public function getActive()

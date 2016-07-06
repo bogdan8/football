@@ -68,6 +68,7 @@ return array(
     'menu' => array(
         'Не чіпати' => [
             'menus',
+            'subparagraph',
             'users',
         ],
         'Новини' => [
