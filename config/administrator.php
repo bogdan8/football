@@ -71,9 +71,14 @@ return array(
             'subparagraph',
             'users',
         ],
-        'Новини' => [
-            'news',
-            'news_photo',
+        'Статі' => [
+            'Статі' => [
+                'news',
+                'news_photo',
+            ],
+            'Обговорення' => [
+                'discussion',
+            ]
         ],
         'Пожертви' => [
             'donate',

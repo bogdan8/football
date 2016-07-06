@@ -4,11 +4,13 @@ use App\Models\Donate_people;
 use App\Models\Matches_played;
 use App\Models\News;
 use App\Models\Standings;
+use App\Models\Discussion;
+
 
 class IndexController extends MainController
 {
 
-    public function index(News $news, Matches_played $matches_played, Standings $standings, Donate_people $people)
+    public function index(News $news, Matches_played $matches_played, Standings $standings, Donate_people $people, Discussion $discussion)
     {
         /** Новини */
         $this->data['news'] = $news->getActiveWithLimit();
@@ -22,8 +24,12 @@ class IndexController extends MainController
         $this->data['standings_young'] = $standings->getActiveYoung(); //Діти
         /** Кінець турнірної таблиці */
         /** Люди які зробили пожертви */
-        $this->data['donate_people'] = $people->getActive(); //Дорослі
+        $this->data['donate_people'] = $people->getActive();
         /** Кінець люди які зробили пожертви */
+        /** Обговорення */
+        $this->data['discussion_all'] = $discussion->getActive();
+        $this->data['discussion_limit'] = $discussion->getActiveWithLimit();
+        /** кінець обговорення */
         return view('pages.index', $this->data);
     }
 
