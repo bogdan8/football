@@ -10,7 +10,7 @@ class CreateMatchesPlayedTable extends Migration {
 		Schema::create('matches_played', function (Blueprint $table) {
 			$table->increments('id');
 			$table->boolean('active');
-			$table->integer('tour');
+			$table->integer('matches_tour_id');
 			$table->date('date_played');
 			$table->string('title_one_team');
 			$table->integer('count_one_team');

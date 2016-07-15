@@ -17,6 +17,11 @@ class Team extends Model
         return $this->hasMany('App\Models\Standings');
     }
 
+    public function next_and_last_teams()
+    {
+        return $this->hasMany('App\Models\Next_and_last_teams');
+    }
+
     public function getActive()
     {
         return $this->published()->get();

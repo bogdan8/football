@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+    @include('matches.next_matches', $next_matches)
     @foreach($season as $item)
         <a href="/matches/season/{{$item->id}}">Сезон {{$item->number_season}}</a>
     @endforeach

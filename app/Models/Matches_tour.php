@@ -22,6 +22,11 @@ class Matches_tour extends Model
         return $this->hasMany('App\Models\Start_matches');
     }
 
+    public function next_and_last_matches()
+    {
+        return $this->hasMany('App\Models\Next_and_last_matches');
+    }
+
     public function getActive()
     {
         return $this->published()->get();

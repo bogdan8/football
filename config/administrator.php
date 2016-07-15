@@ -106,6 +106,8 @@ return array(
             'racing_circles',
             'matches_tour',
             'matches_played',
+            'next_and_last_matches',
+            'next_and_last_teams',
         ]
     ),
 
