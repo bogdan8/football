@@ -99,6 +99,8 @@ return array(
             'kfc_fundraiser',
             'kfc_list_of_candidates_year',
             'kfc_list_of_candidates_people',
+            'kfc_regulations_number',
+            'kfc_regulations_terms',
         ]
     ),
 

@@ -15,8 +15,10 @@ Route::group(
     ['prefix' => 'kfc'],
     function () {
         Route::get('spending', ['as' => 'spending', 'uses' => 'KfcController@spending']);
-        Route::get('fundraiser', ['as' => 'spending', 'uses' => 'KfcController@fundraiser']);
-        Route::get('list_of_candidates', ['as' => 'spending', 'uses' => 'KfcController@list_of_candidates']);
+        Route::get('fundraiser', ['as' => 'fundraiser', 'uses' => 'KfcController@fundraiser']);
+        Route::get('list_of_candidates', ['as' => 'list_of_candidates', 'uses' => 'KfcController@list_of_candidates']);
+        Route::get('regulations', ['as' => 'regulations', 'uses' => 'KfcController@kfc_regulations_number']);
+        Route::get('regulations/{id}', ['as' => 'regulations', 'uses' => 'KfcController@kfc_regulations_terms']);
     });
 /* kfc */
 
