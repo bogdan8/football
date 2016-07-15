@@ -10,10 +10,6 @@ return [
         'active' => [
             'title' => 'Показувати чи ні',
         ],
-        'tour' => [
-            'type' => 'number',
-            'title' => 'Тур',
-        ],
         'date_played' => [
             'type' => 'date',
             'title' => 'Дата гри',
@@ -38,9 +34,10 @@ return [
             'type' => 'bool',
             'title' => 'Показувати',
         ],
-        'tour' => [
-            'type' => 'number',
+        'matches_tour' => [
             'title' => 'Тур',
+            'type' => 'relationship',
+            'name_field' => 'tour',
         ],
         'date_played' => [
             'type' => 'date',

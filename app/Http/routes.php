@@ -21,6 +21,12 @@ Route::group(
         Route::get('regulations/{id}', ['as' => 'regulations', 'uses' => 'KfcController@kfc_regulations_terms']);
     });
 /* kfc */
+/* matches */
+Route::get('matches', ['as' => 'matches', 'uses' => 'MatchesController@index']);
+Route::get('matches/season/{id}', ['as' => 'season', 'uses' => 'MatchesController@season']);
+Route::get('matches/season/{id}/standings', ['as' => 'standings', 'uses' => 'MatchesController@standings']);
+Route::get('matches/season/{id}/standings/{id_racing}/racing', ['as' => 'standings', 'uses' => 'MatchesController@racing']);
+/* matches */
 
 
 Route::controllers([

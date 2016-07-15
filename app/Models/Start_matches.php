@@ -2,9 +2,9 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Matches_played extends Model
+class Start_matches extends Model
 {
-    protected $table = 'matches_played';
+    protected $table = 'start_matches';
 
     public function adult()
     {
@@ -29,11 +29,6 @@ class Matches_played extends Model
     public function getActiveYoung()
     {
         return $this->published()->where(['adult_id' => '2'])->get();
-    }
-
-    public function getActiveOther()
-    {
-        return $this->published()->where('adult_id <> 1 AND adult_id <> 2')->get();
     }
 
     public function scopePublished($query)

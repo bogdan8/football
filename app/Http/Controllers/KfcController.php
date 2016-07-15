@@ -44,7 +44,7 @@ class KfcController extends MainController
     public function kfc_regulations_terms($id, Kfc_regulations_number $regulations_number)
     {
         $this->data['kfc_regulations_number_get'] = $regulations_number->getActive();
-        $this->data['kfc_regulations_number'] = $regulations_number->firstWhereIdTrue($id);
+        $this->data['kfc_regulations_number'] = $regulations_number->find($id);
 
         return view('kfc.regulations_terms', $this->data);
     }

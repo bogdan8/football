@@ -17,11 +17,6 @@ class Kfc_regulations_number extends Model
         return $this->published()->get();
     }
 
-    public function firstWhereIdTrue($id)
-    {
-        return $this->published()->where(['id' => $id])->first();
-    }
-
     public function scopePublished($query)
     {
         $query->where(['active' => '1']);

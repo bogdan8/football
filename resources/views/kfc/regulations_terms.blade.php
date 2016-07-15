@@ -4,7 +4,7 @@
     <h4>Статус КФС</h4>
     <pre>
           @foreach($kfc_regulations_number_get as $item)
-            Номер: <a href="/kfc/regulations/{!! $item->regulations_number !!}">{!! $item->regulations_number !!}</a>
+            Номер: <a href="/kfc/regulations/{!! $item->id !!}">{!! $item->regulations_number !!}</a>
         @endforeach
     </pre>
     <pre>

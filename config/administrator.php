@@ -86,7 +86,6 @@ return array(
         ],
         'Про команди' => [
             'adult',
-            'matches_played',
             'standings',
             'team',
         ],
@@ -101,6 +100,12 @@ return array(
             'kfc_list_of_candidates_people',
             'kfc_regulations_number',
             'kfc_regulations_terms',
+        ],
+        'Матчі' => [
+            'matches_season',
+            'racing_circles',
+            'matches_tour',
+            'matches_played',
         ]
     ),
 
