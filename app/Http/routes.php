@@ -17,7 +17,7 @@ Route::group(
         Route::get('spending', ['as' => 'spending', 'uses' => 'KfcController@spending']);
         Route::get('fundraiser', ['as' => 'fundraiser', 'uses' => 'KfcController@fundraiser']);
         Route::get('list_of_candidates', ['as' => 'list_of_candidates', 'uses' => 'KfcController@list_of_candidates']);
-        Route::get('list_of_candidates/{year}', ['as' => 'list_of_candidates_year', 'uses' => 'KfcController@list_of_candidates_year']);
+        Route::get('list_of_candidates_year/{year}', ['as' => 'list_of_candidates_year', 'uses' => 'KfcController@list_of_candidates_year']);
         Route::get('regulations', ['as' => 'regulations', 'uses' => 'KfcController@kfc_regulations_number']);
         Route::get('regulations/{id}', ['as' => 'regulations', 'uses' => 'KfcController@kfc_regulations_terms']);
     });
