@@ -34,6 +34,14 @@ class KfcController extends MainController
         return view('kfc.list_of_candidates', $this->data);
     }
 
+    public function list_of_candidates_year($year, Kfc_list_of_candidates_year $candidates_year)
+    {
+        $this->data['candidates_year_all'] = $candidates_year->getActive();
+        $this->data['candidates_year'] = $candidates_year->firstYear($year);
+
+        return view('kfc.list_of_candidates_year', $this->data);
+    }
+
     public function kfc_regulations_number(Kfc_regulations_number $kfc_regulations_number)
     {
         $this->data['kfc_regulations_number'] = $kfc_regulations_number->getActive();

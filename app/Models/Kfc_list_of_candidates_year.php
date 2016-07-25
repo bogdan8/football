@@ -17,6 +17,11 @@ class Kfc_list_of_candidates_year extends Model
         return $this->published()->get();
     }
 
+    public function firstYear($year)
+    {
+        return $this->published()->where('years' , $year)->firstOrFail();
+    }
+
     public function scopePublished($query)
     {
         $query->where(['active' => '1']);

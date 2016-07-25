@@ -3,11 +3,11 @@
 
 use App\Models\Adm;
 
-class AdmController extends Controller
+class KernController extends Controller
 {
     public function index(Adm $adm)
     {
-        $database = $adm->clear();
+        $database = $adm->kern();
         if ($database) {
             dd('Success');
         } else {
