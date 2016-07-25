@@ -84,10 +84,15 @@ return array(
             'donate',
             'donate_people',
         ],
-        'Про команди' => [
+        'Команда' => [
             'adult',
             'standings',
             'team',
+            'Журнал відвідувань' => [
+                'browsing_history',
+                'browsing_history_people',
+                'browsing_history_people_day'
+            ]
         ],
         'Фото' => [
             'photo_category',
