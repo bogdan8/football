@@ -16,10 +16,10 @@ return [
             'type' => 'bool',
             'title' => 'Показувати',
         ],
-        'adult' => [
-            'title' => 'Дорослі - юнаки',
+        'matches_season' => [
+            'title' => 'Сезон',
             'type' => 'relationship',
-            'name_field' => 'title',
+            'name_field' => 'number_season',
         ],
         'team' => [
             'title' => 'Команда',

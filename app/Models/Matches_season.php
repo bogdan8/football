@@ -12,9 +12,19 @@ class Matches_season extends Model
         return $this->hasMany('App\Models\Racing_circles');
     }
 
+    public function standings()
+    {
+        return $this->hasMany('App\Models\Standings');
+    }
+
     public function getActive()
     {
         return $this->published()->get();
+    }
+
+    public function firstSeason($season)
+    {
+        return $this->published()->where('number_season', $season)->firstOrFail();
     }
 
     public function getSeasonTour($id)

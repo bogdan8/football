@@ -1,6 +1,9 @@
 <?php namespace App\Http\Controllers;
 
 use App\Models\Browsing_history;
+use App\Models\Matches_season;
+use App\Models\Next_and_last_matches;
+use App\Models\Standings;
 
 class TeamsController extends MainController
 {
@@ -10,9 +13,21 @@ class TeamsController extends MainController
 
     }
 
-    public function matches()
+    public function matches_season(Matches_season $season, Next_and_last_matches $next_and_last_matches)
     {
+        $this->data['next_matches'] = $next_and_last_matches->getNext();
+        $this->data['standings_season'] = $season->getActive();
 
+        return view('teams.matches_season', $this->data);
+    }
+
+    public function matches($season, Matches_season $matches_season, Next_and_last_matches $next_and_last_matches)
+    {
+        $this->data['next_matches'] = $next_and_last_matches->getNext();
+        $this->data['standings_season'] = $matches_season->getActive();
+        $this->data['standings_season_with_standings'] = $matches_season->firstSeason($season);
+
+        return view('teams.matches', $this->data);
     }
 
     public function browsing_history(Browsing_history $browsing_history)

@@ -11,7 +11,7 @@ class CreateStandingsTable extends Migration
         Schema::create('standings', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('active');
-            $table->integer('adult_id');
+            $table->integer('matches_season_id');
             $table->integer('team_id');
             $table->integer('count_games');
             $table->integer('count_win');

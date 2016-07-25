@@ -37,7 +37,8 @@ Route::group(
     ['prefix' => 'teams'],
     function () {
         Route::get('storage', ['as' => 'storage', 'uses' => 'TeamsController@storage']);
-        Route::get('matches', ['as' => 'matches', 'uses' => 'TeamsController@matches']);
+        Route::get('matches', ['as' => 'matches', 'uses' => 'TeamsController@matches_season']);
+        Route::get('matches/{season}', ['as' => 'matches', 'uses' => 'TeamsController@matches']);
         Route::get('browsing_history', ['as' => 'browsing_history', 'uses' => 'TeamsController@browsing_history']);
         Route::get('browsing_history_people/{mounts}', ['as' => 'browsing_history_people', 'uses' => 'TeamsController@browsing_history_people']);
     });
