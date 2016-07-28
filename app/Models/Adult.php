@@ -12,11 +12,6 @@ class Adult extends Model
         return $this->hasMany('App\Models\Matches_played');
     }
 
-    public function standings()
-    {
-        return $this->hasMany('App\Models\Standings');
-    }
-
     public function team()
     {
         return $this->hasMany('App\Models\Team');
