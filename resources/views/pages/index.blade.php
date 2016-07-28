@@ -1,50 +1,114 @@
 @extends('layouts.app')
 @section('content')
-    <h4>Новини</h4>
-    <pre>
-    @foreach($news as $item)
-            Назва: {!! $item->title !!}
-            Дата: {!! $item->date_news !!}
-            Текст: {!! $item->body !!}
-            середня картинка<img width="50px" height="50px" src="/uploads/news/medium/{{$item->image}}"/>
-            оригіна<img width="50px" height="50px" src="/uploads/news/original/{{$item->image}}"/>
-            маленька картинка <img width="50px" height="50px" src="/uploads/news/small/{{$item->image}}"/><br/>
-            Відео:
-            <div style="height: 50px;width: 50px;">{!! $item->video !!}</div>
-            <a class="btn btn-success"
-               href="/news/{{$item->slug}}">Повна новина</a>
-        @endforeach
-    </pre>
-    <h4>Список людей які внесли пожертви</h4>
-    <pre>
-    @foreach($donate_people as $item)
-            Імя: {!! $item->title !!}
-            Дата пожертви: {!! $item->date !!}
-            Кількість грошей: {!! $item->count_money !!}грн
-        @endforeach
-    </pre>
-    <br/>
-    <h4>Теми обговорення з лімітом</h4>
-    <pre>
-    @foreach($discussion_limit as $item)
-            Назва: {!! $item->title !!}
-            Дата: {!! $item->created_at !!}
-            Текст: {!! $item->body !!}
-            середня картинка<img width="50px" height="50px" src="/uploads/discussion/medium/{{$item->image}}"/>
-            оригіна<img width="50px" height="50px" src="/uploads/discussion/original/{{$item->image}}"/>
-            маленька картинка <img width="50px" height="50px" src="/uploads/discussion/small/{{$item->image}}"/><br/>
-        @endforeach
-    </pre>
-    <br/>
-    <h4>Теми обговорення без ліміту</h4>
-    <pre>
-    @foreach($discussion_all as $item)
-            Назва: {!! $item->title !!}
-            Дата: {!! $item->created_at !!}
-            Текст: {!! $item->body !!}
-            середня картинка<img width="50px" height="50px" src="/uploads/discussion/medium/{{$item->image}}"/>
-            оригіна<img width="50px" height="50px" src="/uploads/discussion/original/{{$item->image}}"/>
-            маленька картинка <img width="50px" height="50px" src="/uploads/discussion/small/{{$item->image}}"/><br/>
-        @endforeach
-    </pre>
+    <div class="body-header-block">
+        <div class="container">
+            <div class="row">
+                <b class="body-header-block-title-first">СТОВРЕНО ДЛЯ ПІДТРИМКИ ФУТБОЛУ В КОРШЕВІ</b>
+            </div>
+            <br>
+            <br>
+
+            <div class="row">
+                <b class="body-header-block-title-second">ГОЛОВНА</b>
+            </div>
+        </div>
+        <div class="container body-header-block-image">
+            <div class="row">
+                <img src="/images/body/stadion.png" class="body-header-image">
+            </div>
+        </div>
+    </div>
+    <div class="body-discussion-block">
+        <div class="container">
+            <div class="row">
+                <b class="body-discussion-block-title-first">ТЕМИ ОБГОВОРЕННЯ</b>
+                <b class="body-discussion-block-title-separator"> | </b>
+                <a href="#" class="body-discussion-block-title-second">ДИВИТИСЬ ВСІ ></a>
+            </div>
+            <div class="body-discussion-block-list-for">
+                @foreach($discussion_limit as $item)
+                    <div class="col-lg-6 body-discussion-block-list-one">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <img class="body-discussion-image" src="/uploads/discussion/medium/{{$item->image}}"/>
+                            </div>
+                            <div class="panel-body">
+                                <b class="body-discussion-block-panel-block-new-team">НОВА ТЕМА</b>
+                                <b class="body-discussion-block-panel-block-date">{{date_create($item->created_at)->Format('d.m.Y')}}</b>
+
+                                <p class="body-discussion-block-panel-block-title">{{$item->title}}:</p>
+
+                                <p class="body-discussion-block-panel-block-description">{!! $item->body !!}</p>
+
+                                <div class="comments-show-block">
+                                    @foreach($item->discussion_comments as $coment)
+                                        <div class="comments-show">
+                                            <b class="comments-show-name">{{$coment->name}}</b>
+                                            <b class="comments-show-date">{{date_create($item->created_at)->Format('d.m.Y')}}</b>
+
+                                            <p class="comments-show-description">{{$coment->description}}</p>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <div class="comments-add">
+                                    <form method="POST" action="/" accept-charset="UTF-8">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
+                                        <input type="hidden" name="discussion_id" value="{{ $item->id }}"/>
+                                        <label for="Ваше імя *:">Ваше імя *:</label>
+                                        <input id="name" placeholder="Ваше імя :" required="required"
+                                               class="form-control" name="name" type="text">
+                                        <br>
+                                        <label for="Ваш текст *:">Ваше текст *:</label>
+                                        <input id="description" placeholder="Ваше імя :" required="required"
+                                               class="form-control" name="description" type="text">
+                                        <br>
+                                        <input class="btn btn-default" value="Коментувати" type="submit">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    <div class="block-index-page-news-info">
+
+    </div>
+    <div class="block-index-page-matches center-block">
+        <div class="block-index-page-matches-header">
+            <p class="block-index-page-next-math block-index-page-border">НАСТУПНИЙ МАТЧ</p>
+
+        </div>
+        <div class="block-index-page-matches-body">
+            <p class="text-center block-index-page-matches-body-tour">
+                {{$next_match->matches_tour->tour}}
+                тур, {{date_create($next_match->matches_tour->date_tour)->Format('d:m:Y')}} турнір
+            </p>
+
+            <div class="block-index-page-matches-body-team-one">
+                <p>{{$next_match->next_and_last_teams[0]->team->title}}</p>
+                <img src="/uploads/team_logotype/small/{{$next_match->next_and_last_teams[0]->team->logotype}}"/>
+
+            </div>
+
+            <div class="block-index-page-matches-body-team-result">
+                <p class="block-index-page-matches-body-team-goals">
+                    {{$next_match->next_and_last_teams[0]->goals}} :
+                    {{$next_match->next_and_last_teams[1]->goals}}
+                </p>
+
+                <div class="block-index-page-matches-body-team-result-bottom center-block">
+                    <p class="block-index-page-matches-next-match-day">
+                        Відбудеться {{date_create($next_match->date_played)->Format('d.m.Y')}}, о {{$next_match->date_played_hour}}
+                    </p>
+                </div>
+            </div>
+            <div class="block-index-page-matches-body-team-two">
+                <p>{{$next_match->next_and_last_teams[1]->team->title}}</p>
+                <img src="/uploads/team_logotype/small/{{$next_match->next_and_last_teams[1]->team->logotype}}"/>
+            </div>
+        </div>
+    </div>
+
 @stop

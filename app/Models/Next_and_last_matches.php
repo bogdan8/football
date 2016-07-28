@@ -26,7 +26,7 @@ class Next_and_last_matches extends Model
         return $this->published()->where(['next' => '1'])->first();
     }
 
-    public function getLst()
+    public function getLast()
     {
         return $this->published()->where(['last' => '1'])->first();
     }

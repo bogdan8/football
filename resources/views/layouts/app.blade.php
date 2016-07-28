@@ -8,7 +8,7 @@
 
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/my.css') }}" rel="stylesheet">
-
+    <script type="text/javascript" src="/js/masonry.min.js"></script>
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 </head>
@@ -17,11 +17,14 @@
     @include('components.header')
 </div>
 <div class="body">
-    @yield('content')
+    <div class="body-header">
+        @yield('content')
+    </div>
+
 </div>
-<div class="footer">
+{{--<div class="footer">
     @include('components.footer')
-</div>
+</div>--}}
 <!-- Scripts -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>

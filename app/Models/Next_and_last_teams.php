@@ -18,12 +18,8 @@ class Next_and_last_teams extends Model
 
     public function getActive()
     {
-        return $this->published()->get();
+        return $this->get();
     }
 
-    public function scopePublished($query)
-    {
-        $query->where(['active' => '1']);
-    }
 
 }

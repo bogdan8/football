@@ -14,6 +14,10 @@ return [
             'type' => 'relationship',
             'name_field' => 'id',
         ],
+        'goals' => [
+            'title' => 'Забиті',
+            'type' => 'number'
+        ],
         'team' => [
             'title' => 'Команда',
             'type' => 'relationship',

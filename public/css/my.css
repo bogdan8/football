@@ -1,5 +1,6 @@
 .body {
     min-height: 500px;
+    height: auto;
 }
 
 a {
@@ -27,7 +28,7 @@ a {
     position: absolute;
     color: #698DAD;
     font-size: 18px;
-    margin-top: -7%;
+    margin-top: -98px;
     margin-left: 17%;
 }
 
@@ -35,7 +36,7 @@ a {
     width: 40%;
     height: 150px;
     margin-left: 55%;
-    margin-top: -11%;
+    margin-top: -131px;
 }
 
 .header-block-raising-money-for-playground-interest-title {
@@ -94,11 +95,11 @@ a {
 }
 
 .header-logo {
+    border-radius: 50%;
     width: 150px;
     height: 150px;
-    position: absolute;
     margin-left: 6%;
-    margin-top: -89px;
+    margin-top: -106px;
 }
 
 /* Nav-bar */
@@ -112,7 +113,7 @@ a {
     width: 100%;
     height: 50px;
     background-color: #698DAD;
-    margin-top: 72px;
+    margin-top: 74px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,5 +126,270 @@ a {
 }
 
 /* End Nav-bar */
-
 /* End Header */
+
+/* Body */
+/* Body Header */
+
+.body-header {
+    width: 100%;
+    height: 412px;
+    background-image: url(/images/body/body-header.jpg);
+    background-color: white;
+}
+
+.body-header-block {
+    padding-top: 30px;
+}
+
+.body-header-block-title-first {
+    color: #666666;
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+.body-header-block-title-second {
+    color: black;
+    font-size: 25px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.body-header-block-image {
+    width: 90%;
+    height: 200px;
+    margin-top: 30px;
+}
+
+.body-header-image {
+    width: 100%;
+    height: 250px;
+}
+
+/* End Body Header */
+
+.body-discussion-block {
+    height: auto;
+    margin-top: 80px;
+}
+
+.body-discussion-block-title-first {
+    float: left;
+    font-size: 18px;
+    margin-left: 10%;
+}
+
+.body-discussion-block-title-separator {
+    float: left;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.body-discussion-block-title-second {
+    font-size: 18px;
+    color: #666666;
+}
+
+.body-discussion-block-list-for {
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+.body-discussion-block-list-one {
+    display: flex;
+    justify-content: center;
+}
+
+.panel-heading {
+    width: 100%;
+    height: 200px;
+    border-top: 2px solid blue;
+    border-radius: 0;
+    padding: 0;
+}
+
+.panel-body {
+    padding: 40px;
+}
+
+.panel {
+    border: 1px solid rgba(0, 17, 255, 0.2);
+    border-radius: 0;
+    width: 90%;
+}
+
+.body-discussion-image {
+    width: 100%;
+    height: 100%;
+}
+
+.body-discussion-block-panel-block-new-team {
+    color: #666666;
+    font-weight: 800;
+}
+
+.body-discussion-block-panel-block-date {
+    float: right;
+    color: #666666;
+}
+
+.body-discussion-block-panel-block-title {
+    margin-top: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.body-discussion-block-panel-block-description {
+    font-weight: 700;
+}
+
+.comments-show-block {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.comments-show {
+    margin-top: 5px;
+    border-top: 1px solid #666666;
+}
+
+.comments-show-name {
+    color: #0066cc;
+    margin-top: 10px;
+}
+
+.comments-show-date {
+    float: right;
+    color: #666666;
+}
+
+.comments-show-description {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.block-index-page-news-info {
+    width: 100%;
+    margin-top: 50px;
+    height: 400px;
+    background-color: #698DAD;
+}
+
+.block-index-page-matches {
+    width: 80%;
+    height: 250px;
+    margin-top: 50px;
+    border: 1px solid rgba(102, 102, 102, 0.2);
+    margin-bottom: 500px;
+    background-color: #E2F2FF;
+}
+
+.block-index-page-matches-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.block-index-page-next-math {
+    font-size: 25px;
+    padding: 20px;
+    color: black;
+}
+
+.block-index-page-border {
+    border-top: 1px solid rgba(102, 102, 102, 0.2);
+    border-left: 1px solid rgba(102, 102, 102, 0.2);
+    border-right: 1px solid rgba(102, 102, 102, 0.2);
+    background-color: white;
+}
+
+.block-index-page-matches-body {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    margin-top: -10px;
+}
+
+.block-index-page-matches-body-tour {
+    padding-top: 10px;
+    font-weight: 600;
+    color: #666666;
+}
+
+.block-index-page-matches-body-team-one {
+    width: 30%;
+    height: 80px;
+    margin-left: 30px;
+    float: left;
+}
+
+.block-index-page-matches-body-team-one p {
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.block-index-page-matches-body-team-one img {
+    width: 100px;
+    height: 100px;
+    float: right;
+    margin-top: -71px;
+}
+
+.block-index-page-matches-body-team-result-bottom {
+    margin-top: -12px;
+    width: 270px;
+    border-top: 25px solid white;
+    border-left: 25px solid white;
+    border-bottom: 25px solid #698DAD;
+    border-right: 25px solid white;
+}
+
+.block-index-page-matches-body-team-result {
+    width: 30%;
+    float: left;
+    margin-left: 2%;
+}
+
+.block-index-page-matches-body-team-goals {
+    font-size: 45px;
+    color: green;
+    text-align: center;
+    font-weight: 600;
+}
+
+.block-index-page-matches-next-match-day {
+    position: absolute;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+.block-index-page-matches-body-team-two {
+    width: 30%;
+    height: 80px;
+    float: left;
+}
+
+.block-index-page-matches-body-team-two p {
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    padding-top: 20px;
+    padding-right: 20px;
+    float: right;
+}
+
+.block-index-page-matches-body-team-two img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-top: -10px;
+}
+
+/* End Body */

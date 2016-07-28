@@ -7,6 +7,11 @@ class Discussion extends Model
 
     protected $table = 'discussion';
 
+    public function discussion_comments()
+    {
+        return $this->hasMany('App\Models\Discussion_comments');
+    }
+
     public function getActive()
     {
         return $this->published()->get();
@@ -14,7 +19,7 @@ class Discussion extends Model
 
     public function getActiveWithLimit()
     {
-        return $this->published()->take(5)->get();
+        return $this->published()->take(4)->get();
     }
 
     public function scopePublished($query)
