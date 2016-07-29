@@ -1,29 +1,78 @@
 @extends('layouts.app')
 @section('content')
-
-    <h4>Список категорій</h4>
-    <pre>
-    @foreach($photo_category as $item)
-        Кількість фоток {{ count($item->gallery)}}
-        Назва: {!! $item->title !!}
-        Дата: {!! $item->created_at !!}
-        @if(!empty($item->image))
-            середня картинка<img width="50px" height="50px" src="/uploads/photo_category/medium/{{$item->image}}"/>
-            оригіна<img width="50px" height="50px" src="/uploads/photo_category/original/{{$item->image}}"/>
-            маленька картинка <img width="50px" height="50px" src="/uploads/photo_category/small/{{$item->image}}"/>
-            <br/>
-        @endif
-        @if(!empty($item->image_url))
-            картинка:
-            <div style="height: 50px;width: 50px;">
-                <img width="50px" height="50px" src="{!! $item->image_url !!}"/>
+    <div class="body-header-block">
+        <div class="container">
+            <div class="row">
+                <b class="body-header-block-title-first">ГАЛЕРЕЯ</b>
             </div>
-        @endif
-        <a class="btn btn-success"
-           href="/gallery/{{$item->title}}">Перейти на фотки</a>
-        <br/>
-    @endforeach
-    </pre>
-    <!-- Пагінація -->
-    <!-- Пагінація -->
+            <br>
+            <br>
+
+            <div class="row">
+                <b class="body-header-block-title-second">МЕДИА</b>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <img class="index-photo-big" src="/uploads/gallery/medium/{{$all_photo[0]->image}}"/>
+
+                    <div class="index-photo-description-big">
+                        <p class="index-photo-description-count">{{count($all_photo)}}</p>
+                        <a class="index-photo-description-link"
+                           href="/gallery/all_photo">ВСІ ФОТОГРАФІЇ</a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="col-lg-12" style="margin-top: 30px;">
+                        @if(!empty($photo_category[0]->image))
+                            <img class="index-photo-right"
+                                 src="/uploads/photo_category/medium/{{$photo_category[0]->image}}"/>
+                        @endif
+                        @if(!empty($photo_category[0]->image_url))
+                            <img class="index-photo-right" src="{!! $photo_category[0]->image_url !!}"/>
+                        @endif
+                        <div class="index-photo-description">
+                            <p class="index-photo-description-count">{{count($photo_category[0]->gallery)}}</p>
+                            <a class="index-photo-description-link"
+                               href="/gallery/{{$photo_category[0]->title}}">{{$photo_category[0]->title}}</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        @if(!empty($photo_category[1]->image))
+                            <img class="index-photo-right"
+                                 src="/uploads/photo_category/medium/{{$photo_category[1]->image}}"/>
+                        @endif
+                        @if(!empty($photo_category[1]->image_url))
+                            <img class="index-photo-right" src="{!! $photo_category[1]->image_url !!}"/>
+                        @endif
+                        <div class="index-photo-description">
+                            <p class="index-photo-description-count">{{count($photo_category[1]->gallery)}}</p>
+                            <a class="index-photo-description-link"
+                               href="/gallery/{{$photo_category[1]->title}}">{{$photo_category[1]->title}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row index-photo-bottom">
+                <?php for($i = 2; $i < count($photo_category); $i++){ ?>
+                <div class="col-lg-4">
+                    @if(!empty($photo_category[$i]->image))
+                        <img class="index-photo-right"
+                             src="/uploads/photo_category/medium/{{$photo_category[$i]->image}}"/>
+
+                    @endif
+                    @if(!empty($photo_category[$i]->image_url))
+                        <img class="index-photo-right" src="{!! $photo_category[$i]->image_url !!}"/>
+                    @endif
+                    <div class="index-photo-description">
+                        <p class="index-photo-description-count">{{count($photo_category[1]->gallery)}}</p>
+                        <a class="index-photo-description-link"
+                           href="/gallery/{{$photo_category[1]->title}}">{{$photo_category[1]->title}}</a>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
 @stop

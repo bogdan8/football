@@ -8,6 +8,7 @@ Route::get('news/{slug}', ['as' => 'news.record', 'uses' => 'NewsController@cart
 /* news */
 /* gallery */
 Route::get('gallery', ['as' => 'gallery', 'uses' => 'GalleryController@index']);
+Route::get('gallery/all_photo', ['as' => 'gallery.all_photo', 'uses' => 'GalleryController@all_photo']);
 Route::get('gallery/{title}', ['as' => 'gallery.show', 'uses' => 'GalleryController@cart']);
 /* gallery */
 /* kfc */
@@ -48,5 +49,3 @@ Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
 ]);
-
-Route::get('kernel_adm_middleware', ['as' => 'adm', 'uses' => 'KernController@index']);

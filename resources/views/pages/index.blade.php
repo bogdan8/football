@@ -72,8 +72,26 @@
             </div>
         </div>
     </div>
-    <div class="block-index-page-news-info">
-
+    <div class="block-index-page-info">
+        @foreach($short_description_index_page as $index_description)
+            <div class="block-index-page-info-row">
+                <div class="block-index-page-info-row-header">
+                    <p>{{$index_description->name}}</p>
+                </div>
+                <div class="block-index-page-info-row-image">
+                    <img src="/uploads/index_short_description/medium/{{$index_description->image}}"/>
+                </div>
+                <div class="block-index-page-info-row-title">
+                    <p>{{$index_description->title}}</p>
+                </div>
+                <div class="block-index-page-info-row-description">
+                    <p>{!! substr($index_description->description,0,240) !!} ...</p>
+                </div>
+                <div class="block-index-page-info-row-link">
+                    <p><a href="{{$index_description->link}}">> Детальніше</a></p>
+                </div>
+            </div>
+        @endforeach
     </div>
     <div class="block-index-page-matches center-block">
         <div class="block-index-page-matches-header">
@@ -100,7 +118,8 @@
 
                 <div class="block-index-page-matches-body-team-result-bottom center-block">
                     <p class="block-index-page-matches-next-match-day">
-                        Відбудеться {{date_create($next_match->date_played)->Format('d.m.Y')}}, о {{$next_match->date_played_hour}}
+                        Відбудеться {{date_create($next_match->date_played)->Format('d.m.Y')}},
+                        о {{$next_match->date_played_hour}}
                     </p>
                 </div>
             </div>
