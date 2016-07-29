@@ -654,6 +654,92 @@ a {
 
 /* End KFC List_Of_Candidates */
 
+/* KFC Regulations */
+.regulations-block {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regulations-block-number-active {
+    width: 100px;
+    height: 100px;
+    background-color: #FDAB2D;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regulations-block-number-triangle-active {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid #FDAB2D;
+    margin-top: 130px;
+}
+
+.regulations-block-number-active a {
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    margin-right: -30px;
+}
+
+.regulations-block-number {
+    width: 100px;
+    height: 100px;
+    background-color: #698DAD;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regulations-block-number-triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid #6894B7;
+    margin-top: 130px;
+}
+
+.regulations-block-number a {
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    margin-right: -30px;
+}
+
+.regulations-block-list-terms {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    background-color: #6894B7;
+}
+
+.regulations-block-list-terms-text {
+    width: 100%;
+    height: auto;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+}
+
+.regulations-block-list-terms-text-p {
+    float: left;
+    color: white;
+    font-weight: 500;
+}
+
+/* EndKFC Regulations */
+
 /* End KFC */
 
 /* Footer */

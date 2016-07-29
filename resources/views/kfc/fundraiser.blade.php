@@ -12,6 +12,7 @@
                 <b class="body-header-block-title-second">ЗБІР КОШТІВ</b>
             </div>
         </div>
+        <br>
     </div>
     <div class="container">
         <div class="row">
