@@ -14,7 +14,7 @@ class Gallery extends Model
 
     public function getActive()
     {
-        return $this->published()->get();
+        return $this->published()->paginate(9);
     }
 
     public function scopePublished($query)

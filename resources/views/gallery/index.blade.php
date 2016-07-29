@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-                <div class="row index-photo-bottom">
+            <div class="row index-photo-bottom">
                 <?php for($i = 2; $i < count($photo_category); $i++){ ?>
                 <div class="col-lg-4">
                     @if(!empty($photo_category[$i]->image))
@@ -66,9 +66,9 @@
                         <img class="index-photo-right" src="{!! $photo_category[$i]->image_url !!}"/>
                     @endif
                     <div class="index-photo-description">
-                        <p class="index-photo-description-count">{{count($photo_category[1]->gallery)}}</p>
+                        <p class="index-photo-description-count">{{count($photo_category[$i]->gallery)}}</p>
                         <a class="index-photo-description-link"
-                           href="/gallery/{{$photo_category[1]->title}}">{{$photo_category[1]->title}}</a>
+                           href="/gallery/{{$photo_category[$i]->title}}">{{$photo_category[$i]->title}}</a>
                     </div>
                 </div>
                 <?php } ?>
