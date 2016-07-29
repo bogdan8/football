@@ -158,6 +158,13 @@ a {
     margin-bottom: 50px;
 }
 
+.body-header-block-title-three {
+    color: black;
+    font-size: 20px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
 .body-header-block-image {
     width: 90%;
     height: 200px;
@@ -538,6 +545,36 @@ a {
 }
 
 /* End Gallery */
+
+/* KFC */
+/* KFC Spending */
+.table-spending {
+    background-color: #ECF3FB;
+    border-top: 5px solid #698DAD;
+    width: 100%;
+}
+
+.table-bottom {
+    width: 100%;
+    background-color: #698DAD;
+    color: white;
+    height: 40px;
+}
+
+.table-spending-count-name {
+    font-size: 15px;
+    font-weight: 500;
+    border-right: 1px solid white;
+}
+
+.table-spending-count-value {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* End KFC Spending */
+
+/* END KFC */
 
 /* Footer */
 .block-footer {
