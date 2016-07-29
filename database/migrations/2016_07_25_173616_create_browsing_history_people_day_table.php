@@ -16,8 +16,7 @@ class CreateBrowsingHistoryPeopleDayTable extends Migration
         Schema::create('browsing_history_people_day', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('active');
-            $table->integer('browsing_history_people_id');
-            $table->string('day_name');
+            $table->integer('browsing_history_people_day_in_month_id');
             $table->integer('count_visit');
             $table->timestamps();
         });

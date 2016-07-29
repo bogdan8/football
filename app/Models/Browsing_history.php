@@ -7,9 +7,9 @@ class Browsing_history extends Model
 
     protected $table = 'browsing_history';
 
-    public function browsing_history_people()
+    public function browsing_history_people_day_in_month()
     {
-        return $this->hasMany('App\Models\Browsing_history_people');
+        return $this->hasMany('App\Models\Browsing_history_people_day_in_month');
     }
 
     public function getActive()

@@ -739,8 +739,189 @@ a {
 }
 
 /* EndKFC Regulations */
-
 /* End KFC */
+
+/* News */
+.news-list-block {
+    width: 100%;
+    height: 300px;
+}
+
+.news-list-image {
+    width: 100%;
+    height: 100%;
+}
+
+.news-list-block-bottom {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    opacity: 0.6;
+    margin-top: -100px;
+}
+
+.news-list-block-bottom-link {
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 40px;
+}
+
+.news-list-block-bottom-date {
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+.news-pagination-block {
+    width: 100%;
+    height: 37px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-color: #6894B7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.my-pagination > li {
+    display: inline;
+}
+
+.my-pagination > li > a,
+.my-pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 20px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: white;
+}
+
+.my-pagination > li:first-child > a,
+.my-pagination > li:first-child > span {
+    margin-left: 0;
+}
+
+.my-pagination > li:last-child > a,
+.my-pagination > li:last-child > span {
+}
+
+.my-pagination > li > a:hover,
+.my-pagination > li > span:hover,
+.my-pagination > li > a:focus,
+.my-pagination > li > span:focus {
+    color: white;
+    background-color: #FDAB2D;
+    border-color: #dddddd;
+}
+
+.my-pagination > .active > a,
+.my-pagination > .active > span,
+.my-pagination > .active > a:hover,
+.my-pagination > .active > span:hover,
+.my-pagination > .active > a:focus,
+.my-pagination > .active > span:focus {
+    background-color: #FDAB2D;
+    z-index: 2;
+    color: white;
+    border-color: #337ab7;
+    cursor: default;
+}
+
+.my-pagination > .disabled > span,
+.my-pagination > .disabled > span:hover,
+.my-pagination > .disabled > span:focus,
+.my-pagination > .disabled > a,
+.my-pagination > .disabled > a:hover,
+.my-pagination > .disabled > a:focus {
+    color: white;
+    cursor: not-allowed;
+}
+
+/* End News */
+/* Matches */
+.block-matches {
+    width: 80%;
+    height: 153px;
+    margin-top: 50px;
+    border: 1px solid rgba(102, 102, 102, 0.4);
+    background-color: #E2F2FF;
+}
+
+.block-matches-body {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+}
+
+.block-matches-body-team-goals {
+    font-size: 25px;
+    color: #6894B7;
+    text-align: center;
+    font-weight: 600;
+    border-left: 2px solid #666666;
+    border-right: 2px solid #666666;
+    width: 50%;
+    margin-left: 80px;
+}
+
+.block-matches-body-team-result-bottom {
+    width: 270px;
+}
+
+.block-matches-next-match-day {
+    font-weight: 500;
+    color: #666666;
+    text-align: center;
+    font-size: 15px;
+}
+
+.block-matches-body-team-result {
+    width: 30%;
+    float: left;
+    margin-left: 2%;
+}
+
+/* End Matches */
+
+/* Teams */
+/* Browsing history */
+.table-browsing-history {
+    background-color: #ECF3FB;
+    width: 100%;
+}
+
+.browsing-history-block-header {
+    width: 100%;
+    height: 50px;
+    background-color: #ECF3FB;
+    border-top: 5px solid #698DAD;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.browsing-history-block-header p{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+.browsing-history-block-header a{
+    font-size: 20px;
+    font-weight: 500;
+    color: #698DAD;
+}
+/* End Browsing history */
+
+/* End Teams */
 
 /* Footer */
 .block-footer {

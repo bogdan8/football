@@ -33,7 +33,7 @@
                 @foreach($kfc_fundraiser as $item)
                     <tr>
                         <td>{{$i++}}</td>
-                        <td>{{ $item->goods_or_services }}</td>
+                        <td>{{ $item->initials }}</td>
                         <td style="text-align: center">{{date_create($item->date)->Format('d.m.Y')}}</td>
                         <td style="text-align: center">{{ $item->sum }}.00 грн</td>
                         <?php $sum += $item->sum;?>

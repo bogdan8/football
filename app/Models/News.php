@@ -19,7 +19,7 @@ class News extends Model
 
     public function getActiveWithPaginate()
     {
-        return $this->published()->paginate(1);
+        return $this->published()->paginate(8);
     }
 
     public function getActiveWithLimit()

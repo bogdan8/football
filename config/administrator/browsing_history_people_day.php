@@ -10,8 +10,11 @@ return [
         'active' => [
             'title' => 'Показувати чи ні',
         ],
-        'day_name' => [
-            'title' => 'День відвідування',
+        'day_visit' => [
+            'title' => 'День відвідувань',
+        ],
+        'count_visit' => [
+            'title' => 'Кількість відвідування',
         ],
     ],
     'edit_fields' => [
@@ -19,14 +22,14 @@ return [
             'type' => 'bool',
             'title' => 'Показувати',
         ],
-        'browsing_history_people' => [
+        'browsing_history_people_day_in_month' => [
             'title' => 'Ігрок',
             'type' => 'relationship',
-            'name_field' => 'name_people',
+            'name_field' => 'title',
         ],
-        'day_name' => [
+        'day_visit' => [
             'type' => 'text',
-            'title' => 'День відвідування писати(01.2)',
+            'title' => 'День відвідувань',
         ],
         'count_visit' => [
             'type' => 'number',
@@ -34,8 +37,8 @@ return [
         ],
     ],
     'filters' => array(
-        'initials' => array(
-            'title' => 'Прізвище імя побатькові',
+        'day_visit' => array(
+            'title' => 'День відвідування',
         ),
     ),
     'form_width' => 500,

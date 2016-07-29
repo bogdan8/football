@@ -1,9 +1,9 @@
 <?php namespace App\Http\Controllers;
 
 use App\Models\Browsing_history;
+use App\Models\Browsing_history_people_day_in_month;
 use App\Models\Matches_season;
 use App\Models\Next_and_last_matches;
-use App\Models\Standings;
 
 class TeamsController extends MainController
 {
@@ -30,9 +30,10 @@ class TeamsController extends MainController
         return view('teams.matches', $this->data);
     }
 
-    public function browsing_history(Browsing_history $browsing_history)
+    public function browsing_history(Browsing_history $browsing_history, Browsing_history_people_day_in_month $day_in_month)
     {
         $this->data['browsing_history'] = $browsing_history->getActive();
+        $this->data['browsing_day_in_month'] = $day_in_month->getActive();
 
         return view('teams.browsing_history', $this->data);
     }

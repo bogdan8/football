@@ -93,7 +93,7 @@ return array(
             'team',
             'Журнал відвідувань' => [
                 'browsing_history',
-                'browsing_history_people',
+                'browsing_history_people_day_in_month',
                 'browsing_history_people_day'
             ]
         ],
