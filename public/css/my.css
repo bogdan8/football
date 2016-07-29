@@ -574,7 +574,87 @@ a {
 
 /* End KFC Spending */
 
-/* END KFC */
+/* KFC List_Of_Candidates */
+.list-candidates-block {
+    min-height: 300px;
+    background-color: #ECF3FB;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-top: 2px solid #698DAD;
+    border-left: 1px solid rgba(102, 102, 102, 0.2);
+    border-right: 1px solid rgba(102, 102, 102, 0.2);
+    border-bottom: 1px solid rgba(102, 102, 102, 0.2);
+}
+
+.list-candidates-block-people {
+    padding-top: 30px;
+    padding-left: 40px;
+}
+
+.list-candidates-block-people-name {
+    padding: 1px;
+}
+
+.list-candidates-block-years {
+    margin-top: 50px;
+}
+
+.list-candidates-block-year-active-corner {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 37px solid #6894B7;
+    border-bottom: 25px solid transparent;
+    margin-left: -185px;
+    position: absolute;
+    margin-top: -25px;
+}
+
+.list-candidates-block-year-active {
+    width: 500px;
+    height: 50px;
+    background-color: #6894B7;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#6894B7, endColorstr=#89ADCF);
+    background-image: -moz-linear-gradient(left top, #6894B7 42%, #89ADCF 60%, #BFD6E8 100%);
+    background-image: linear-gradient(left top, #6894B7 42%, #89ADCF 60%, #BFD6E8 100%);
+    background-image: -webkit-linear-gradient(left top, #6894B7 42%, #89ADCF 60%, #BFD6E8 100%);
+    background-image: -o-linear-gradient(left top, #6894B7 42%, #89ADCF 60%, #BFD6E8 100%);
+    background-image: -ms-linear-gradient(left top, #6894B7 42%, #89ADCF 60%, #BFD6E8 100%);
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(42%, #6894B7), color-stop(60%, #89ADCF), color-stop(100%, #BFD6E8));
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -50px;
+}
+
+.list-candidates-block-year {
+    width: 500px;
+    height: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -50px;
+}
+
+.list-candidates-block-year-name {
+    font-size: 25px;
+    color: #666666;
+    font-weight: 500;
+
+}
+
+.list-candidates-block-year-name-active {
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+
+}
+
+/* End KFC List_Of_Candidates */
+
+/* End KFC */
 
 /* Footer */
 .block-footer {
