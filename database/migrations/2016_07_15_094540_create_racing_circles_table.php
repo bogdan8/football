@@ -16,6 +16,8 @@ class CreateRacingCirclesTable extends Migration
         Schema::create('racing_circles', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('active');
+            $table->string('title');
+            $table->integer('number');
             $table->integer('matches_season_id');
             $table->string('name');
             $table->timestamps();

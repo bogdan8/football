@@ -16,6 +16,7 @@ class CreateMatchesTourTable extends Migration
         Schema::create('matches_tour', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('active');
+            $table->string('title');
             $table->integer('racing_circles_id');
             $table->integer('tour');
             $table->date('date_tour');

@@ -2,6 +2,10 @@
     min-height: 100%;
 }
 
+body {
+    min-width: 1000px;
+}
+
 a {
     color: #666666;
     font-size: 18px;
@@ -377,6 +381,7 @@ a {
     font-size: 25px;
     padding: 20px;
     color: black;
+    font-weight: 500;
 }
 
 .block-index-page-border {
@@ -852,7 +857,6 @@ a {
 .block-matches {
     width: 80%;
     height: 153px;
-    margin-top: 50px;
     border: 1px solid rgba(102, 102, 102, 0.4);
     background-color: #E2F2FF;
 }
@@ -909,19 +913,127 @@ a {
     justify-content: space-around;
     align-items: center;
 }
-.browsing-history-block-header p{
+
+.browsing-history-block-header p {
     font-size: 20px;
     font-weight: 500;
     color: black;
 }
-.browsing-history-block-header a{
+
+.browsing-history-block-header a {
     font-size: 20px;
     font-weight: 500;
     color: #698DAD;
 }
+
 /* End Browsing history */
 
 /* End Teams */
+
+/* Season */
+.number-season {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.season-link {
+    font-weight: 400;
+    font-size: 18px;
+    color: #666666;
+}
+
+.season-link-active {
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+}
+
+.block-season-matches {
+    width: 95%;
+    height: auto;
+    margin-top: 20px;
+    border: 1px solid rgba(102, 102, 102, 0.2);
+    background-color: #E2F2FF;
+}
+
+.block-season-matches-header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.block-index-page-next-math-no-active {
+    font-size: 25px;
+    padding: 20px;
+    color: #666666;
+}
+
+.block-season-matches-body {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    margin-top: -10px;
+}
+
+.block-season-matches-body-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.block-season-matches-body-header p {
+    font-weight: 500;
+    font-size: 20px;
+    color: #666666;
+}
+
+.block-season-matches-body-header a {
+    font-weight: 500;
+    font-size: 20px;
+    color: #698DAD;
+}
+
+.block-season-matches-body-body {
+    width: 100%;
+    border: 1px solid rgba(102, 102, 102, 0.3);
+}
+
+.table-season {
+    background-color: white;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.block-season-matches-body-body-tour {
+    height: 100%;
+}
+.block-season-matches-body-body-tour p{
+    text-align: center;
+    height: 100%;
+}
+.block-season-matches-body-body-tour-name {
+    color: #666666;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.block-season-matches-body-body-tour-date {
+    color: #666666;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.match-season-body-tr {
+    border: 1px solid rgba(102, 102, 102, 0.2);
+    width: 100%;
+}
+
+/* End Season */
 
 /* Footer */
 .block-footer {

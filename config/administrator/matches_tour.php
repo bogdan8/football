@@ -10,6 +10,9 @@ return [
         'active' => [
             'title' => 'Показувати чи ні',
         ],
+        'title' => [
+            'title' => 'Опис для себе',
+        ],
         'tour' => [
             'title' => 'Тур',
         ]
@@ -25,7 +28,11 @@ return [
         'racing_circles' => [
             'title' => 'Коло',
             'type' => 'relationship',
-            'name_field' => 'name',
+            'name_field' => 'title',
+        ],
+        'title' => [
+            'type' => 'text',
+            'title' => 'Опис для себе',
         ],
         'tour' => [
             'type' => 'number',

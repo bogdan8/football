@@ -22,6 +22,15 @@ class Racing_circles extends Model
         return $this->published()->get();
     }
 
+    public function firstRacing($id_racing, $id)
+    {
+        return $this->published()->where(['number' => $id_racing, 'matches_season_id' => $id])->firstOrFail();
+    }
+    public function getSeason($id)
+    {
+        return $this->published()->where(['matches_season_id' => $id])->get();
+    }
+
     public function scopePublished($query)
     {
         $query->where(['active' => '1']);

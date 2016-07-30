@@ -47,7 +47,7 @@
                 <tr style="width: 100%;">
                     <th width="3%">№</th>
                     <th width="30%">Прізвище Ім'я Побатькові</th>
-                    @if(!empty($browsing_history_mounts->browsing_history_people_day_in_month))
+                    @if(count($browsing_history_mounts->browsing_history_people_day_in_month) > 0)
                         @foreach($browsing_history_mounts->browsing_history_people_day_in_month[0]->browsing_history_people_day as $day)
                             <th>{{$day->day_visit}}</th>
                         @endforeach

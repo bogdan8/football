@@ -10,6 +10,12 @@ return [
         'active' => [
             'title' => 'Показувати чи ні',
         ],
+        'title' => [
+            'title' => 'Опис для себе',
+        ],
+        'number' => [
+            'title' => 'Порядковий номер в сезоні',
+        ],
         'name' => [
             'title' => 'Назва кола',
         ],
@@ -18,6 +24,14 @@ return [
         'active' => [
             'type' => 'bool',
             'title' => 'Показувати',
+        ],
+        'title' => [
+            'type' => 'text',
+            'title' => 'Опис для себе',
+        ],
+        'number' => [
+            'type' => 'number',
+            'title' => 'Порядковий номер в сезоні',
         ],
         'matches_season' => [
             'title' => 'Сезон',

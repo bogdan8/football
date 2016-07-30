@@ -37,7 +37,7 @@ return [
         'matches_tour' => [
             'title' => 'Тур',
             'type' => 'relationship',
-            'name_field' => 'tour',
+            'name_field' => 'title',
         ],
         'date_played' => [
             'type' => 'date',

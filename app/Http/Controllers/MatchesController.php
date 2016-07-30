@@ -39,6 +39,8 @@ class MatchesController extends MainController
         $this->data['season'] = $season->getActive();
         $this->data['season_one'] = $season->find($id);
         $this->data['racing'] = $circles->find($id_racing);
+        $this->data['racing_get_with_season'] = $circles->getSeason($id);
+        $this->data['racing_one'] = $circles->firstRacing($id_racing, $id);
 
         return view('matches.racing', $this->data);
     }
