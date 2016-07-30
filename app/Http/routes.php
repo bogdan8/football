@@ -29,7 +29,6 @@ Route::group(
     function () {
         Route::get('', ['as' => 'matches', 'uses' => 'MatchesController@index']);
         Route::get('season/{id}', ['as' => 'season', 'uses' => 'MatchesController@season']);
-        Route::get('season/{id}/standings', ['as' => 'standings', 'uses' => 'MatchesController@standings']);
         Route::get('season/{id}/standings/{id_racing}/racing', ['as' => 'standings', 'uses' => 'MatchesController@racing']);
     });
 /* matches */
@@ -40,6 +39,8 @@ Route::group(
         Route::get('storage', ['as' => 'storage', 'uses' => 'TeamsController@storage']);
         Route::get('matches', ['as' => 'matches', 'uses' => 'TeamsController@matches_season']);
         Route::get('matches/{season}', ['as' => 'matches', 'uses' => 'TeamsController@matches']);
+        Route::get('season/{id}', ['as' => 'season', 'uses' => 'TeamsController@season']);
+        Route::get('season/{id}/standings/{id_racing}/racing', ['as' => 'standings', 'uses' => 'TeamsController@racing']);
         Route::get('browsing_history', ['as' => 'browsing_history', 'uses' => 'TeamsController@browsing_history']);
         Route::get('browsing_history_people/{mounts}', ['as' => 'browsing_history_people', 'uses' => 'TeamsController@browsing_history_people']);
     });

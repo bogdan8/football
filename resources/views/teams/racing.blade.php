@@ -25,7 +25,7 @@
         <div class="row">
             <div class="number-season">
                 @foreach($season as $index)
-                    @if($index->id == $season[0]->id)
+                    @if($index->id == $season_one->id)
                         <a class="season-link-active"
                            href="/teams/season/{{$index->id}}">Сезон {{$index->number_season}}</a>
                     @else
@@ -44,15 +44,19 @@
                 </div>
                 <div class="block-season-matches-body">
                     <div class="block-season-matches-body-header">
-                        <a><</a>
-                        @foreach($season[0]->racing_circles as $racing_circles)
-                            @if($racing_circles->number == 1)
-                                <p>{{$racing_circles->name}} </p>
-                            @elseif($racing_circles->number == 2)
-                                <a style="float: left;"
-                                   href="/teams/season/1/standings/{{$racing_circles->number}}/racing">></a>
-                            @endif
-                        @endforeach
+                        @if($racing_one->number == 1)
+                            <a><</a>
+                        @else
+                            <a style="float: left;"
+                               href="/teams/season/{{$racing_one->matches_season_id}}/standings/{{$racing_one->number - 1}}/racing"><</a>
+
+                        @endif
+                        <p>{{$racing_one->name}} </p>
+                        @if($racing_one->number == count($racing_get_with_season))
+                            <a>></a>
+                        @else
+                            <a href="/teams/season/{{$racing_one->matches_season_id}}/standings/{{$racing_one->number + 1}}/racing">></a>
+                        @endif
                     </div>
                     <div class="block-season-matches-body-body">
                         <?php
@@ -64,18 +68,22 @@
                         ?>
                         <table class="table table-bordered table-season">
                             <tbody>
-                            @foreach($season[0]->racing_circles[0]->matches_tour as $tour)
-                                <tr class="match-season-body-tr">
+                            @foreach($racing_one->matches_tour as $tour)
+                                <tr style="border: 1px solid rgba(102, 102, 102, 0.2);">
                                     <?php
                                     $monthes_number = date_create($tour->date_tour)->Format('m');
                                     $date = $monthes[$monthes_number] . ' ' . date_create($tour->date_tour)->Format('Y');
                                     ?>
-                                    <td class="block-season-matches-body-body-tour" style="border: none; width: 25%">
-                                        <p class="block-season-matches-body-body-tour-name">ТУР {{$tour->tour}}</p>
-
-                                        <p class="block-season-matches-body-body-tour-date">{{$date}}</p>
+                                    <td class="block-season-matches-body-body-tour" style="border: none">
+                                        <div>
+                                            <p class="block-season-matches-body-body-tour-name">
+                                                ТУР {{$tour->tour}}</p>
+                                        </div>
+                                        <div>
+                                            <p class="block-season-matches-body-body-tour-date">{{$date}}</p>
+                                        </div>
                                     </td>
-                                    <td style="width: 25%;">
+                                    <td>
                                         @foreach($tour->matches_played as $matches_played_team)
                                             <p class="text-center">
                                                 {{$matches_played_team->title_one_team}}
@@ -84,7 +92,7 @@
                                             </p>
                                         @endforeach
                                     </td>
-                                    <td style="width: 25%;">
+                                    <td>
                                         @foreach($tour->matches_played as $matches_played_team)
                                             <p class="text-center">
                                                 {{$matches_played_team->count_one_team}}
@@ -93,7 +101,7 @@
                                             </p>
                                         @endforeach
                                     </td>
-                                    <td style="width: 25%;">
+                                    <td>
                                         @foreach($tour->matches_played as $matches_played_team)
                                             <p class="text-center">
                                                 <?php

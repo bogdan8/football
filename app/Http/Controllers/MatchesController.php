@@ -24,15 +24,6 @@ class MatchesController extends MainController
         return view('matches.season', $this->data);
     }
 
-    public function standings($id, Matches_season $season, Next_and_last_matches $next_and_last_matches)
-    {
-        $this->data['next_matches'] = $next_and_last_matches->getNext();
-        $this->data['season'] = $season->getActive();
-        $this->data['season_one'] = $season->find($id);
-
-        return view('matches.standings', $this->data);
-    }
-
     public function racing($id, $id_racing, Matches_season $season, Racing_circles $circles, Next_and_last_matches $next_and_last_matches)
     {
         $this->data['next_matches'] = $next_and_last_matches->getNext();

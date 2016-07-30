@@ -4,6 +4,7 @@ use App\Models\Browsing_history;
 use App\Models\Browsing_history_people_day_in_month;
 use App\Models\Matches_season;
 use App\Models\Next_and_last_matches;
+use App\Models\Racing_circles;
 
 class TeamsController extends MainController
 {
@@ -16,18 +17,30 @@ class TeamsController extends MainController
     public function matches_season(Matches_season $season, Next_and_last_matches $next_and_last_matches)
     {
         $this->data['next_matches'] = $next_and_last_matches->getNext();
-        $this->data['standings_season'] = $season->getActive();
+        $this->data['season'] = $season->getActive();
 
         return view('teams.matches_season', $this->data);
     }
 
-    public function matches($season, Matches_season $matches_season, Next_and_last_matches $next_and_last_matches)
+    public function season($id, Matches_season $season, Next_and_last_matches $next_and_last_matches)
     {
         $this->data['next_matches'] = $next_and_last_matches->getNext();
-        $this->data['standings_season'] = $matches_season->getActive();
-        $this->data['standings_season_with_standings'] = $matches_season->firstSeason($season);
+        $this->data['season'] = $season->getActive();
+        $this->data['season_one'] = $season->find($id);
 
-        return view('teams.matches', $this->data);
+        return view('teams.season', $this->data);
+    }
+
+    public function racing($id, $id_racing, Matches_season $season, Racing_circles $circles, Next_and_last_matches $next_and_last_matches)
+    {
+        $this->data['next_matches'] = $next_and_last_matches->getNext();
+        $this->data['season'] = $season->getActive();
+        $this->data['season_one'] = $season->find($id);
+        $this->data['racing'] = $circles->find($id_racing);
+        $this->data['racing_get_with_season'] = $circles->getSeason($id);
+        $this->data['racing_one'] = $circles->firstRacing($id_racing, $id);
+
+        return view('teams.racing', $this->data);
     }
 
     public function browsing_history(Browsing_history $browsing_history, Browsing_history_people_day_in_month $day_in_month)
