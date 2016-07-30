@@ -5,13 +5,18 @@ use App\Models\Browsing_history_people_day_in_month;
 use App\Models\Matches_season;
 use App\Models\Next_and_last_matches;
 use App\Models\Racing_circles;
+use App\Models\Team_logo;
+use App\Models\Team_peoples_position;
 
 class TeamsController extends MainController
 {
 
-    public function storage()
+    public function storage(Team_peoples_position $team_peoples_position, Team_logo $team_logo)
     {
+        $this->data['team_peoples_position'] = $team_peoples_position->getActive();
+        $this->data['team_logo'] = $team_logo->firstActive();
 
+        return view('teams.storage', $this->data);
     }
 
     public function standings(Matches_season $season, Next_and_last_matches $next_and_last_matches)
@@ -33,6 +38,7 @@ class TeamsController extends MainController
 
     public function matches_season(Matches_season $season, Next_and_last_matches $next_and_last_matches)
     {
+        $this->data['next_matches'] = $next_and_last_matches->getNext();
         $this->data['season'] = $season->getActive();
 
         return view('teams.matches_season', $this->data);

@@ -90,7 +90,14 @@ return array(
         'Команда' => [
             'adult',
             'standings',
-            'team',
+            'Каманда' => [
+                'team',
+                'Команда ю-18' => [
+                    'team_peoples_position',
+                    'team_peoples',
+                    'team_logo'
+                ],
+            ],
             'Журнал відвідувань' => [
                 'browsing_history',
                 'browsing_history_people_day_in_month',

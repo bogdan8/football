@@ -1049,6 +1049,92 @@ a {
     padding-left: 5px;
 }
 
+/* Storage */
+.storage-header-image-block {
+    width: 90%;
+    height: 250px;
+}
+
+.storage-header-image {
+    margin-left: 5%;
+    width: 100%;
+    height: 100%;
+}
+
+.storage-body-block {
+    margin-top: 70px;
+    width: 100%;
+    height: auto;
+    margin-left: 5%;
+}
+
+.storage-body-block-header {
+    width: 100%;
+    height: 50px;
+}
+
+.storage-body-block-header p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #666666;
+}
+
+.storage-body-block-body {
+    width: 90%;
+}
+
+.storage-body-block-body > table > thead > tr {
+    border-bottom: 3px solid #698DAD;
+    color: #666666;
+}
+
+.storage-body-block-body > table > tbody > tr {
+    border-bottom: 2px solid #698DAD;
+    text-align: center;
+}
+
+.storage-body-block-body > table > tbody > tr > td {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.storage-table-name-position p {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #666666;
+    float: left;
+}
+
+.storage-table-number-people {
+    width: 30px;
+    height: 80px;
+    background-color: #698DAD;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.storage-table-number-people p {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.storage-table-number-image-people {
+    width: 90px;
+    background-color: #698DAD;
+    height: 80px;
+}
+
+.storage-table-number-image-people img {
+    width: 100%;
+    height: 100%;
+}
+
+/* End Storage */
+
 /* End Teams */
 
 /* Footer */
