@@ -35,11 +35,12 @@
             </div>
             <div class="block-season-matches center-block">
                 <div class="block-season-matches-header">
-                    <p class="block-index-page-next-math block-index-page-border">ЗІГРАНІ МАТЧІ</p>
+                    <a href="/teams/matches" class="block-index-page-next-math block-index-page-border">ЗІГРАНІ МАТЧІ</a>
 
-                    <p class="block-index-page-next-math-no-active">НАСТУПНИЙ МАТЧ</p>
+                    <a href="/teams/standings" class="block-index-page-next-math-no-active">ТУРНІРНА ТАБЛИЦЯ</a>
 
-                    <p class="block-index-page-next-math-no-active">НАСТУПНИЙ МАТЧ</p>
+                    <a class="block-index-page-next-math-no-active">НАСТУПНИЙ МАТЧ</a>
+
 
                 </div>
                 <div class="block-season-matches-body">

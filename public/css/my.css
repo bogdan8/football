@@ -937,9 +937,11 @@ a {
     margin-top: 15px;
     margin-left: 50px;
 }
-.number-season a{
-    margin-left: 50px   ;
+
+.number-season a {
+    margin-left: 50px;
 }
+
 .season-link {
     font-weight: 400;
     font-size: 18px;
@@ -1014,10 +1016,12 @@ a {
 .block-season-matches-body-body-tour {
     height: 100%;
 }
-.block-season-matches-body-body-tour p{
+
+.block-season-matches-body-body-tour p {
     text-align: center;
     height: 100%;
 }
+
 .block-season-matches-body-body-tour-name {
     color: #666666;
     font-weight: 500;
@@ -1036,6 +1040,16 @@ a {
 }
 
 /* End Season */
+
+/* Teams */
+
+.teams-images-logo-small {
+    width: 50px;
+    height: 50px;
+    padding-left: 5px;
+}
+
+/* End Teams */
 
 /* Footer */
 .block-footer {

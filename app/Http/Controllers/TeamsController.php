@@ -14,9 +14,25 @@ class TeamsController extends MainController
 
     }
 
-    public function matches_season(Matches_season $season, Next_and_last_matches $next_and_last_matches)
+    public function standings(Matches_season $season, Next_and_last_matches $next_and_last_matches)
     {
         $this->data['next_matches'] = $next_and_last_matches->getNext();
+        $this->data['season'] = $season->getActive();
+
+        return view('teams.standings', $this->data);
+    }
+
+    public function standings_season($id, Matches_season $season, Next_and_last_matches $next_and_last_matches)
+    {
+        $this->data['next_matches'] = $next_and_last_matches->getNext();
+        $this->data['season'] = $season->getActive();
+        $this->data['season_one'] = $season->find($id);
+
+        return view('teams.standings_season', $this->data);
+    }
+
+    public function matches_season(Matches_season $season, Next_and_last_matches $next_and_last_matches)
+    {
         $this->data['season'] = $season->getActive();
 
         return view('teams.matches_season', $this->data);

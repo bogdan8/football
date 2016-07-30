@@ -38,7 +38,8 @@ Route::group(
     function () {
         Route::get('storage', ['as' => 'storage', 'uses' => 'TeamsController@storage']);
         Route::get('matches', ['as' => 'matches', 'uses' => 'TeamsController@matches_season']);
-        Route::get('matches/{season}', ['as' => 'matches', 'uses' => 'TeamsController@matches']);
+        Route::get('standings', ['as' => 'matches', 'uses' => 'TeamsController@standings']);
+        Route::get('standings/{id}', ['as' => 'matches', 'uses' => 'TeamsController@standings_season']);
         Route::get('season/{id}', ['as' => 'season', 'uses' => 'TeamsController@season']);
         Route::get('season/{id}/standings/{id_racing}/racing', ['as' => 'standings', 'uses' => 'TeamsController@racing']);
         Route::get('browsing_history', ['as' => 'browsing_history', 'uses' => 'TeamsController@browsing_history']);
