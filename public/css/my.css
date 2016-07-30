@@ -937,7 +937,9 @@ a {
     margin-top: 15px;
     margin-left: 50px;
 }
-
+.number-season a{
+    margin-left: 50px;
+}
 .season-link {
     font-weight: 400;
     font-size: 18px;
