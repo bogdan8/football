@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="col-lg-12" style="margin-top: 30px;">
+                    <div class="col-lg-12" style="margin-top: 25px;">
                         @if(!empty($photo_category[0]->image))
                             <img class="index-photo-right"
                                  src="/uploads/photo_category/medium/{{$photo_category[0]->image}}"/>

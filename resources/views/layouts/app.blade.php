@@ -18,7 +18,6 @@
 </div>
 <div class="body">
     <div class="body-header">
-        <img src="/images/body/body-header" alt="">
     </div>
     <div class="body-block">
         @yield('content')

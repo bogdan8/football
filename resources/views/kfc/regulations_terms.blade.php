@@ -30,7 +30,7 @@
                                     {{ $item->regulations_number }}
                                 </a>
 
-                                <div class="regulations-block-number-triangle"></div>
+                                <div class="regulations-block-number-triangle-active"></div>
                             </div>
                         @else
                             <div class="regulations-block-number">
