@@ -16,7 +16,6 @@ class CreateMatchesPlayedTable extends Migration {
 			$table->integer('count_one_team');
 			$table->string('title_second_team');
 			$table->integer('count_second_team');
-			$table->integer('adult_id');
 			$table->timestamps();
 		});
 	}

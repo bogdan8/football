@@ -7,11 +7,6 @@ class Team extends Model
 
     protected $table = 'team';
 
-    public function adult()
-    {
-        return $this->belongsTo('App\Models\Adult');
-    }
-
     public function standings()
     {
         return $this->hasMany('App\Models\Standings');

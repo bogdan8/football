@@ -1,7 +1,6 @@
 <?php namespace App\Http\Controllers;
 
 use App\Models\Next_and_last_matches;
-use App\Models\Next_and_last_teams;
 use App\Models\Short_description_index_page;
 use Illuminate\Http\Request;
 use App\Models\Donate_people;
@@ -38,7 +37,23 @@ class IndexController extends MainController
         /** Кінець наступний матч і попередній */
         /** Короткий опис */
         $this->data['short_description_index_page'] = $index_page->getActive();
+
         return view('pages.index', $this->data);
     }
 
+    public function discussion(Discussion $discussion, Request $request)
+    {
+        if ($request->has('description')) {
+            $discussion_comments = new Discussion_comments();
+            $discussion_comments->name = $request->get('name');
+            $discussion_comments->discussion_id = $request->get('discussion_id');
+            $discussion_comments->description = $request->get('description');
+
+            $discussion_comments->save();
+        }
+
+        $this->data['discussion'] = $discussion->getActive();
+
+        return view('pages.discussion', $this->data);
+    }
 }

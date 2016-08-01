@@ -34,14 +34,25 @@
                         $day = $month;
                     }
                     ?>
-                    <a href="/teams/browsing_history_people/{{$browsing_history[$day-2]->date_visit}}">
-                        <
-                    </a>
-
+                    @if($day != 1)
+                        <a href="/teams/browsing_history_people/{{$browsing_history[$day-2]->date_visit}}">
+                            <
+                        </a>
+                    @else
+                        <a>
+                            <
+                        </a>
+                    @endif
                     <p>Журнал відвідування за {{$date}}</p>
-                    <a href="/teams/browsing_history_people/{{$browsing_history[$day++]->date_visit}}">
-                        >
-                    </a>
+                    @if($day != 12)
+                        <a href="/teams/browsing_history_people/{{$browsing_history[$day++]->date_visit}}">
+                            >
+                        </a>
+                    @else
+                        <a>
+                            >
+                        </a>
+                    @endif
                 </div>
                 <thead>
                 <tr style="width: 100%;">

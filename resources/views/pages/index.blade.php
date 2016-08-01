@@ -23,7 +23,7 @@
             <div class="row">
                 <b class="body-discussion-block-title-first">ТЕМИ ОБГОВОРЕННЯ</b>
                 <b class="body-discussion-block-title-separator"> | </b>
-                <a href="#" class="body-discussion-block-title-second">ДИВИТИСЬ ВСІ ></a>
+                <a href="/discussion" class="body-discussion-block-title-second">ДИВИТИСЬ ВСІ ></a>
             </div>
             <div class="body-discussion-block-list-for">
                 @foreach($discussion_limit as $item)

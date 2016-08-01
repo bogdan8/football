@@ -19,11 +19,6 @@ return [
             'type' => 'bool',
             'title' => 'Показувати',
         ],
-        'adult' => [
-            'title' => 'Дорослі - юнаки',
-            'type' => 'relationship',
-            'name_field' => 'title',
-        ],
         'logotype' => [
             'title' => 'Картинка',
             'type' => 'image',

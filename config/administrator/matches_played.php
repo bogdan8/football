@@ -60,11 +60,6 @@ return [
             'type' => 'number',
             'title' => 'Кількість голів другої команди',
         ],
-        'adult' => [
-            'title' => 'Дорослі - юнаки',
-            'type' => 'relationship',
-            'name_field' => 'title',
-        ],
     ],
     'filters' => array(
         'active' => array(

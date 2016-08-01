@@ -13,7 +13,6 @@ class CreateTeamTable extends Migration
             $table->boolean('active');
             $table->longText('logotype');
             $table->string('title');
-            $table->integer('adult_id');
             $table->timestamps();
         });
     }

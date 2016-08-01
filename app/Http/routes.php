@@ -2,6 +2,7 @@
 
 Route::get('/', ['as' => 'index', 'uses' => 'IndexController@index']);
 Route::post('/', ['as' => 'index', 'uses' => 'IndexController@index']);
+Route::get('/discussion', ['as' => 'discussion', 'uses' => 'IndexController@discussion']);
 /* news */
 Route::get('news', ['as' => 'news', 'uses' => 'NewsController@index']);
 Route::get('news/{slug}', ['as' => 'news.record', 'uses' => 'NewsController@cart']);

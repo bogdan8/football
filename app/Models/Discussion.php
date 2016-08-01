@@ -14,7 +14,7 @@ class Discussion extends Model
 
     public function getActive()
     {
-        return $this->published()->get();
+        return $this->published()->paginate(8);
     }
 
     public function getActiveWithLimit()
