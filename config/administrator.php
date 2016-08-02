@@ -87,6 +87,18 @@ return array(
             'donate',
             'donate_people',
         ],
+        'КФС' => [
+            'kfc_spending',
+            'kfc_fundraiser',
+            'kfc_list_of_candidates_year',
+            'kfc_list_of_candidates_people',
+            'kfc_regulations_number',
+            'kfc_regulations_terms',
+        ],
+        'Майданчик' => [
+            'platform',
+            'platform_photos'
+        ],
         'Команда' => [
             'adult',
             'standings',
@@ -104,18 +116,6 @@ return array(
                 'browsing_history_people_day'
             ]
         ],
-        'Фото' => [
-            'photo_category',
-            'gallery'
-        ],
-        'КФС' => [
-            'kfc_spending',
-            'kfc_fundraiser',
-            'kfc_list_of_candidates_year',
-            'kfc_list_of_candidates_people',
-            'kfc_regulations_number',
-            'kfc_regulations_terms',
-        ],
         'Матчі' => [
             'matches_season',
             'racing_circles',
@@ -123,7 +123,11 @@ return array(
             'matches_played',
             'next_and_last_matches',
             'next_and_last_teams',
-        ]
+        ],
+        'Галерея' => [
+            'photo_category',
+            'gallery'
+        ],
     ),
 
     /**

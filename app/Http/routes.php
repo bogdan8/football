@@ -47,7 +47,9 @@ Route::group(
         Route::get('browsing_history_people/{mounts}', ['as' => 'browsing_history_people', 'uses' => 'TeamsController@browsing_history_people']);
     });
 /* team */
-
+/* platform */
+Route::get('platform', ['as' => 'platform', 'uses' => 'PlatformsController@index']);
+/* platform */
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',

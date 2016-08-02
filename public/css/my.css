@@ -171,7 +171,7 @@ a {
 
 .body-header-block-image {
     width: 90%;
-    height: 200px;
+    height: auto;
     margin-top: 30px;
 }
 
@@ -1142,6 +1142,70 @@ a {
 /* End Storage */
 
 /* End Teams */
+
+/* Platform */
+.platform-header-image-block {
+    border-top: 2px solid #698DAD;
+    width: 85%;
+    height: 250px;
+}
+
+.platform-header-description {
+    margin-left: -15px;
+    width: 85%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: -100px;
+    position: absolute;
+}
+
+.platform-header-description-title {
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+.platform-header-description-description {
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+.platform-header-image {
+    width: 100%;
+    height: 250px;
+}
+
+.platform-show-images {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.platform-body-first-image {
+    width: 95%;
+    height: 100%;
+}
+
+.platform-show-all-images {
+    width: 90%;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.platform-body-all-image {
+    width: 100%;
+    height: 300px;
+}
+
+/* End Platform */
 
 /* Footer */
 .block-footer {
