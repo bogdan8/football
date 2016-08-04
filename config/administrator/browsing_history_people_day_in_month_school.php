@@ -2,7 +2,7 @@
 return [
     'title' => 'Гравець',
     'single' => 'гравця',
-    'model' => 'App\Models\Browsing_history_people_day_in_month',
+    'model' => 'App\Models\Browsing_history_people_day_in_month_school',
     'columns' => [
         'id' => [
             'title' => 'Індифікатор',
@@ -25,6 +25,11 @@ return [
         'title' => [
             'type' => 'text',
             'title' => 'Скорочений опис для себе',
+        ],
+        'adult' => [
+            'title' => 'Яка група',
+            'type' => 'relationship',
+            'name_field' => 'title',
         ],
         'browsing_history' => [
             'title' => 'Місяці',

@@ -2,15 +2,10 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Browsing_history_people_day extends Model
+class Browsing_history_people_day_school extends Model
 {
 
-    protected $table = 'browsing_history_people_day';
-
-    public function browsing_history_people_day_in_month()
-    {
-        return $this->belongsTo('App\Models\Browsing_history_people_day_in_month');
-    }
+    protected $table = 'browsing_history_people_day_school';
 
     public function browsing_history_people_day_in_month_school()
     {

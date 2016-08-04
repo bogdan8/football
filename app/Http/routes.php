@@ -47,6 +47,17 @@ Route::group(
         Route::get('browsing_history_people/{mounts}', ['as' => 'browsing_history_people', 'uses' => 'TeamsController@browsing_history_people']);
     });
 /* team */
+/* school */
+Route::group(
+    ['prefix' => 'school'],
+    function () {
+        Route::get('junior_group', ['as' => 'junior_group', 'uses' => 'SchoolsController@junior_group']);
+        Route::get('senior_group', ['as' => 'senior_group', 'uses' => 'SchoolsController@senior_group']);
+        Route::get('junior_group_people/{mounts}', ['as' => 'junior_group_people', 'uses' => 'SchoolsController@junior_group_people']);
+        Route::get('senior_group_people/{mounts}', ['as' => 'senior_group_people', 'uses' => 'SchoolsController@senior_group_people']);
+
+    });
+/* school */
 /* platform */
 Route::get('platform', ['as' => 'platform', 'uses' => 'PlatformsController@index']);
 /* platform */

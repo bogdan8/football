@@ -12,6 +12,11 @@ class Adult extends Model
         return $this->published()->get();
     }
 
+    public function browsing_history_people_day_in_month_school()
+    {
+        return $this->hasMany('App\Models\Browsing_history_people_day_in_month_school');
+    }
+
     public function scopePublished($query)
     {
         $query->where(['active' => '1']);

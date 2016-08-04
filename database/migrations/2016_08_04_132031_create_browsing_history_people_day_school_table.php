@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBrowsingHistoryPeopleDayInMonthTable extends Migration {
+class CreateBrowsingHistoryPeopleDaySchoolTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,12 @@ class CreateBrowsingHistoryPeopleDayInMonthTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('browsing_history_people_day_in_month', function (Blueprint $table) {
+		Schema::create('browsing_history_people_day_school', function (Blueprint $table) {
 			$table->increments('id');
 			$table->boolean('active');
-			$table->string('title');
-			$table->integer('browsing_history_id');
-			$table->string('name_people');
+			$table->integer('browsing_history_people_day_in_month_school_id');
+			$table->string('day_visit');
+			$table->integer('count_visit');
 			$table->timestamps();
 		});
 	}
@@ -29,7 +29,7 @@ class CreateBrowsingHistoryPeopleDayInMonthTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('browsing_history_people_day_in_month');
+		Schema::drop('browsing_history_people_day_school');
 	}
 
 }

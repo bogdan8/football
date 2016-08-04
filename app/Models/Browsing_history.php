@@ -12,6 +12,11 @@ class Browsing_history extends Model
         return $this->hasMany('App\Models\Browsing_history_people_day_in_month');
     }
 
+    public function browsing_history_people_day_in_month_school()
+    {
+        return $this->hasMany('App\Models\Browsing_history_people_day_in_month_school');
+    }
+
     public function getActive()
     {
         return $this->published()->get();

@@ -99,8 +99,12 @@ return array(
             'platform',
             'platform_photos'
         ],
-        'Команда' => [
+        'ДЮСША' => [
             'adult',
+            'browsing_history_people_day_in_month_school',
+            'browsing_history_people_day_school'
+        ],
+        'Команда' => [
             'standings',
             'Каманда' => [
                 'team',
