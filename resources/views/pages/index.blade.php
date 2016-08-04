@@ -6,11 +6,12 @@
                 <b class="body-header-block-title-first">СТОВРЕНО ДЛЯ ПІДТРИМКИ ФУТБОЛУ В КОРШЕВІ</b>
             </div>
             <br>
-            <br>
 
             <div class="row">
                 <b class="body-header-block-title-second">ГОЛОВНА</b>
             </div>
+            <br>
+
         </div>
         <div class="container body-header-block-image">
             <div class="row">
@@ -93,12 +94,8 @@
             </div>
         @endforeach
     </div>
-    <div class="block-index-page-matches center-block">
-        <div class="block-index-page-matches-header">
-            <p class="block-index-page-next-math block-index-page-border">НАСТУПНИЙ МАТЧ</p>
-
-        </div>
-        <div class="block-index-page-matches-body">
+    <div class="block-matches center-block">
+        <div class="block-matches-body">
             <p class="text-center block-index-page-matches-body-tour">
                 {{$next_match->matches_tour->tour}}
                 тур, {{date_create($next_match->matches_tour->date_tour)->Format('d:m:Y')}} турнір
@@ -110,16 +107,14 @@
 
             </div>
 
-            <div class="block-index-page-matches-body-team-result">
-                <p class="block-index-page-matches-body-team-goals">
-                    {{$next_match->next_and_last_teams[0]->goals}} :
-                    {{$next_match->next_and_last_teams[1]->goals}}
+            <div class="block-matches-body-team-result">
+                <p class="block-matches-body-team-goals">
+                    початок <br>
+                    {{$next_match->date_played_hour}}
                 </p>
-
-                <div class="block-index-page-matches-body-team-result-bottom center-block">
-                    <p class="block-index-page-matches-next-match-day">
-                        Відбудеться {{date_create($next_match->date_played)->Format('d.m.Y')}},
-                        о {{$next_match->date_played_hour}}
+                <div class="block-matches-body-team-result-bottom center-block">
+                    <p class="block-matches-next-match-day">
+                        {{$next_match->where_played}}
                     </p>
                 </div>
             </div>

@@ -11,11 +11,12 @@
                 <b class="body-header-block-title-first">КФС</b>
             </div>
             <br>
-            <br>
 
             <div class="row">
                 <b class="body-header-block-title-second">СТАТУТ КФС</b>
             </div>
+            <br>
+
         </div>
         <br>
     </div>

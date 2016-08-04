@@ -11,11 +11,12 @@
                 <b class="body-header-block-title-second">МАТЧІ</b>
             </div>
             <br>
-            <br>
 
             <div class="row">
                 <b class="body-header-block-title-first">НАСТУПНИЙ МАТЧ</b>
             </div>
+            <br>
+
         </div>
     </div>
     @if(!empty($next_matches))
@@ -37,7 +38,7 @@
                 <div class="block-season-matches-header">
                     <p class="block-index-page-next-math block-index-page-border">ЗІГРАНІ МАТЧІ</p>
 
-                    <p class="block-index-page-next-math-no-active">НАСТУПНИЙ МАТЧ</p>
+                    <a href="/teams/standings" class="block-index-page-next-math-no-active">ТУРНІРНА ТАБЛИЦЯ</a>
 
                     <p class="block-index-page-next-math-no-active">НАСТУПНИЙ МАТЧ</p>
 

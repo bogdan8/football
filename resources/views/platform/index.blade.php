@@ -39,8 +39,10 @@
     <div class="container">
         <div class="row">
             <div class="platform-show-images">
-                <img src="/uploads/platform_photos/original/{{$platform_photos[0]->image}}"
-                     class="platform-body-first-image">
+                @if(!empty($platform_photos[0]))
+                    <img src="/uploads/platform_photos/original/{{$platform_photos[0]->image}}"
+                         class="platform-body-first-image">
+                @endif
             </div>
         </div>
         <div class="row">

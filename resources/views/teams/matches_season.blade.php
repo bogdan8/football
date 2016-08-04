@@ -1,23 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="body-header-block">
-        <div class="container">
-            <div class="row">
-                <b class="body-header-block-title-first">КОМАНДА Ю - 18</b>
-            </div>
-            <br>
-
-            <div class="row">
-                <b class="body-header-block-title-second">МАТЧІ</b>
-            </div>
-            <br>
-            <br>
-
-            <div class="row">
-                <b class="body-header-block-title-first">НАСТУПНИЙ МАТЧ</b>
-            </div>
-        </div>
-    </div>
+    @include('teams.team_header')
     @if(!empty($next_matches))
         @include('matches.next_matches', $next_matches)
     @endif

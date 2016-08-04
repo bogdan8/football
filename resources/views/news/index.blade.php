@@ -6,12 +6,13 @@
                 <b class="body-header-block-title-first">НОВИНИ КОРШІВСЬКИЙ ФУТБОЛ</b>
             </div>
             <br>
-            <br>
 
             <div class="row">
                 <b class="body-header-block-title-second">НОВИНИ</b>
             </div>
         </div>
+        <br>
+
         <br>
     </div>
     <div class="container">

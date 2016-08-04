@@ -6,7 +6,6 @@
                 <b class="body-header-block-title-first">ГАЛЕРЕЯ</b>
             </div>
             <br>
-            <br>
 
             <div class="row">
                 <b class="body-header-block-title-second">{{$cart->title}}</b>

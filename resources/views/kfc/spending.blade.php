@@ -6,18 +6,18 @@
                 <b class="body-header-block-title-first">КФС</b>
             </div>
             <br>
-            <br>
 
             <div class="row">
                 <b class="body-header-block-title-second">ВИТАРТИ</b>
             </div>
-            <br>
             <br>
 
             <div class="row">
                 <b class="body-header-block-title-three">СПИСОК КУПЛЕНИХ ТОВАРІВ ТА ОПЛАЧЕНИХ РОБІТ</b>
             </div>
             <br>
+            <br>
+
         </div>
     </div>
     <div class="container">
