@@ -90,10 +90,18 @@ return array(
         'КФС' => [
             'kfc_spending',
             'kfc_fundraiser',
-            'kfc_list_of_candidates_year',
-            'kfc_list_of_candidates_people',
-            'kfc_regulations_number',
-            'kfc_regulations_terms',
+            'Кандидати' => [
+                'kfc_list_of_candidates_year',
+                'kfc_list_of_candidates_people',
+            ],
+            'Положення' => [
+                'kfc_regulations_number',
+                'kfc_regulations_terms',
+            ],
+            'Програма' => [
+                'kfc_program_number',
+                'kfc_program_terms',
+            ]
         ],
         'Майданчик' => [
             'platform',

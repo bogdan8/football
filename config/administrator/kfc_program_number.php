@@ -1,8 +1,8 @@
 <?php
 return [
-    'title' => 'КФС номер положення',
+    'title' => 'КФС номер програми',
     'single' => 'номер',
-    'model' => 'App\Models\Kfc_regulations_number',
+    'model' => 'App\Models\Kfc_program_number',
     'columns' => [
         'id' => [
             'title' => 'Індифікатор',
@@ -10,8 +10,8 @@ return [
         'active' => [
             'title' => 'Показувати чи ні',
         ],
-        'regulations_number' => [
-            'title' => 'Номер положення',
+        'program_number' => [
+            'title' => 'Номер програми',
         ],
     ],
     'edit_fields' => [
@@ -19,13 +19,13 @@ return [
             'type' => 'bool',
             'title' => 'Показувати',
         ],
-        'regulations_number' => [
+        'program_number' => [
             'type' => 'number',
-            'title' => 'Номер положення',
+            'title' => 'Номер програми',
         ],
     ],
     'filters' => array(
-        'regulations_number' => [
+        'program_number' => [
             'title' => 'Номер',
         ],
     ),

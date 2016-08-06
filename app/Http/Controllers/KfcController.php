@@ -2,6 +2,7 @@
 
 use App\Models\Kfc_fundraiser;
 use App\Models\Kfc_list_of_candidates_year;
+use App\Models\Kfc_program_number;
 use App\Models\Kfc_regulations_number;
 use App\Models\Kfc_regulations_terms;
 use App\Models\Kfc_spending;
@@ -55,5 +56,19 @@ class KfcController extends MainController
         $this->data['kfc_regulations_number'] = $regulations_number->find($id);
 
         return view('kfc.regulations_terms', $this->data);
+    }
+    public function kfc_program_number(Kfc_program_number $kfc_program_number)
+    {
+        $this->data['kfc_program_number'] = $kfc_program_number->getActive();
+
+        return view('kfc.program_number', $this->data);
+    }
+
+    public function kfc_program_terms($id, Kfc_program_number $kfc_program_number)
+    {
+        $this->data['kfc_program_number_get'] = $kfc_program_number->getActive();
+        $this->data['kfc_program_number'] = $kfc_program_number->find($id);
+
+        return view('kfc.program_terms', $this->data);
     }
 }
