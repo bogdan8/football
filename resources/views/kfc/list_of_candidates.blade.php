@@ -31,9 +31,11 @@
                 <div class="list-candidates-block-years">
                     <div class="list-candidates-block-year-active">
                         <div class="list-candidates-block-year-active-corner"></div>
-                        <a class="list-candidates-block-year-name-active"
-                           href="/kfc/list_of_candidates/{{ $candidates_year[0]->years }}">{{ $candidates_year[0]->years }}
-                            РОКИ</a>
+                        <div class="list-candidates-block-year-active-link">
+                            <a class="list-candidates-block-year-name-active"
+                               href="/kfc/list_of_candidates/{{ $candidates_year[0]->years }}">{{ $candidates_year[0]->years }}
+                                РОКИ</a>
+                        </div>
                     </div>
                     <?php for ($j = 1; $j < count($candidates_year); $j++) { ?>
                     <div class="list-candidates-block-year">

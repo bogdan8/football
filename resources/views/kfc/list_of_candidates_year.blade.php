@@ -32,9 +32,11 @@
                         @if($item->years == $candidates_year->years)
                             <div class="list-candidates-block-year-active">
                                 <div class="list-candidates-block-year-active-corner"></div>
+                                <div class="list-candidates-block-year-active-link">
                                 <a class="list-candidates-block-year-name-active"
                                    href="/kfc/list_of_candidates/{{ $item->years }}">{{ $item->years }}
                                     РОКИ</a>
+                                </div>
                             </div>
                         @else
                             <div class="list-candidates-block-year">

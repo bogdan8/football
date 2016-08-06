@@ -629,21 +629,21 @@ a {
 .list-candidates-block-years {
     margin-top: 50px;
 }
-
+.list-candidates-block-year-active-link{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .list-candidates-block-year-active-corner {
     width: 0;
     height: 0;
     border-top: 25px solid transparent;
     border-right: 37px solid #6894B7;
     border-bottom: 25px solid transparent;
-    margin-left: -185px;
+    margin-left: -36px;
     position: absolute;
-}
-
-@-moz-document url-prefix() {
-    .list-candidates-block-year-active-corner {
-        margin-top: -25px;
-    }
 }
 
 .list-candidates-block-year-active {
@@ -658,9 +658,7 @@ a {
     background-image: -ms-linear-gradient(left top, #6894B7 42%, #89ADCF 60%, #BFD6E8 100%);
     background-image: -webkit-gradient(linear, left top, right bottom, color-stop(42%, #6894B7), color-stop(60%, #89ADCF), color-stop(100%, #BFD6E8));
     margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
     margin-left: -50px;
 }
 
