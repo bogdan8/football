@@ -16,7 +16,7 @@ class CreateStandingsTable extends Migration
             $table->integer('count_games');
             $table->integer('count_win');
             $table->integer('count_draw');
-            $table->integer('cont_loser');
+            $table->integer('count_loser');
             $table->integer('count_goals');
             $table->integer('count_missing');
             $table->string('difference');

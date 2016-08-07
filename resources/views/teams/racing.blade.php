@@ -22,8 +22,7 @@
 
                     <a href="/teams/standings" class="block-index-page-next-math-no-active">ТУРНІРНА ТАБЛИЦЯ</a>
 
-                    <a class="block-index-page-next-math-no-active">НАСТУПНИЙ МАТЧ</a>
-
+                    <a href="/teams/report" class="block-index-page-next-math-no-active">ЗВІТ МАТЧІВ</a>
 
                 </div>
                 <div class="block-season-matches-body">

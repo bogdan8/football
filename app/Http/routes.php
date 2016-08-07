@@ -47,6 +47,9 @@ Route::group(
         Route::get('season/{id}/standings/{id_racing}/racing', ['as' => 'standings', 'uses' => 'TeamsController@racing']);
         Route::get('browsing_history', ['as' => 'browsing_history', 'uses' => 'TeamsController@browsing_history']);
         Route::get('browsing_history_people/{mounts}', ['as' => 'browsing_history_people', 'uses' => 'TeamsController@browsing_history_people']);
+        Route::get('report', ['as' => 'report', 'uses' => 'TeamsController@report']);
+        Route::get('report/season/{id}', ['as' => 'report_season', 'uses' => 'TeamsController@report_season']);
+        Route::get('report/season/{id}/report_tour/{id_route}', ['as' => 'report_season', 'uses' => 'TeamsController@report_season_tour']);
     });
 /* team */
 /* school */

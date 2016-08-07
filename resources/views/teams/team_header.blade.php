@@ -14,6 +14,5 @@
             <b class="body-header-block-title-first">НАСТУПНИЙ МАТЧ</b>
         </div>
         <br>
-
     </div>
 </div>

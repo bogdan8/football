@@ -12,6 +12,11 @@ class Matches_season extends Model
         return $this->hasMany('App\Models\Racing_circles');
     }
 
+    public function report_tour()
+    {
+        return $this->hasMany('App\Models\Report_tour');
+    }
+
     public function standings()
     {
         return $this->hasMany('App\Models\Standings');

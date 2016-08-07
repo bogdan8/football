@@ -133,8 +133,16 @@ return array(
             'racing_circles',
             'matches_tour',
             'matches_played',
-            'next_and_last_matches',
-            'next_and_last_teams',
+            'Наступні матчі' => [
+                'next_and_last_matches',
+                'next_and_last_teams',
+            ],
+            'Звіти' => [
+                'report_tour',
+                'report',
+                'report_goals',
+                'report_replacements'
+            ],
         ],
         'Галерея' => [
             'photo_category',
