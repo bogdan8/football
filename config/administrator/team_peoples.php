@@ -4,9 +4,6 @@ return [
     'single' => 'гравця',
     'model' => 'App\Models\Team_peoples',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],
@@ -21,6 +18,9 @@ return [
         ],
         'surname' => [
             'title' => 'Побатькові',
+        ],
+        'license_number' => [
+            'title' => 'Номер ліцензії',
         ],
     ],
     'edit_fields' => [

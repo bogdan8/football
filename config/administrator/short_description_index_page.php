@@ -4,14 +4,14 @@ return [
     'single' => 'статю',
     'model' => 'App\Models\Short_description_index_page',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'name' => [
             'title' => 'Назва',
         ],
         'title' => [
             'title' => 'Назва опису',
+        ],
+        'link' => [
+            'title' => 'Посилання',
         ],
     ],
     'edit_fields' => [

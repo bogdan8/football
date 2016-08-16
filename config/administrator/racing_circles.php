@@ -4,9 +4,6 @@ return [
     'single' => 'коло',
     'model' => 'App\Models\Racing_circles',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

@@ -4,11 +4,32 @@ return [
     'single' => 'команду',
     'model' => 'App\Models\Standings',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
-            'title' => 'Показувати чи ні',
+            'title' => 'Показувати',
+        ],
+        'count_games' => [
+            'title' => 'К-сть ігор',
+        ],
+        'count_win' => [
+            'title' => 'К-сть перемог',
+        ],
+        'count_draw' => [
+            'title' => 'К-сть нічиїх',
+        ],
+        'count_loser' => [
+            'title' => 'К-сть проіграшів',
+        ],
+        'count_goals' => [
+            'title' => 'К-сть забитих',
+        ],
+        'count_missing' => [
+            'title' => 'К-сть пропущених',
+        ],
+        'difference' => [
+            'title' => '(+ -)',
+        ],
+        'points' => [
+            'title' => 'К-сть очків',
         ],
     ],
     'edit_fields' => [

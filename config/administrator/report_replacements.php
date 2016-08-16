@@ -4,9 +4,6 @@ return [
     'single' => 'заміну',
     'model' => 'App\Models\Report_replacements',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

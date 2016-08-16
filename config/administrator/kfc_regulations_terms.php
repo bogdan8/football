@@ -4,9 +4,6 @@ return [
     'single' => 'положення',
     'model' => 'App\Models\Kfc_regulations_terms',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

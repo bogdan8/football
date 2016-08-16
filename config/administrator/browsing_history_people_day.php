@@ -4,9 +4,6 @@ return [
     'single' => 'день',
     'model' => 'App\Models\Browsing_history_people_day',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

@@ -4,14 +4,15 @@ return [
     'single' => 'обговорення',
     'model' => 'App\Models\Discussion',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],
         'title' => [
             'title' => 'Назва',
+        ],
+        'image' => [
+            'title' => 'Фото',
+            'output' => '<img src="/uploads/discussion/small/(:value)" />'
         ],
         'created_at' => [
             'title' => 'Дата',

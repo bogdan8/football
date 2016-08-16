@@ -4,14 +4,15 @@ return [
     'single' => 'новину',
     'model' => 'App\Models\News',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],
         'title' => [
             'title' => 'Назва',
+        ],
+        'image' => [
+            'title' => 'Фото',
+            'output' => '<img src="/uploads/news/small/(:value)" />'
         ],
         'date_news' => [
             'title' => 'Дата',

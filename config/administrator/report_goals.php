@@ -4,9 +4,6 @@ return [
     'single' => 'забиті голи',
     'model' => 'App\Models\Report_goals',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

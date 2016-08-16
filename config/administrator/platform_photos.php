@@ -4,12 +4,13 @@ return [
     'single' => 'фото',
     'model' => 'App\Models\Platform_photos',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
-        ]
+        ],
+        'image' => [
+            'title' => 'Фото',
+            'output' => '<img src="/uploads/platform_photos/medium/(:value)" />'
+        ],
     ],
     'edit_fields' => [
         'active' => [
@@ -21,7 +22,7 @@ return [
             'type' => 'image',
             'location' => public_path() . '/uploads/platform_photos/original/',
             'sizes' => [
-                [500, 500, 'auto', public_path() . '/uploads/news_photos/medium/', 100],
+                [500, 500, 'auto', public_path() . '/uploads/platform_photos/medium/', 100],
             ],
         ],
     ],

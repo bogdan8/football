@@ -4,14 +4,15 @@ return [
     'single' => 'фото',
     'model' => 'App\Models\Gallery',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],
         'title' => [
             'title' => 'Назва',
+        ],
+        'image' => [
+            'title' => 'Фото',
+            'output' => '<img src="/uploads/gallery/small/(:value)" />'
         ],
     ],
     'edit_fields' => [

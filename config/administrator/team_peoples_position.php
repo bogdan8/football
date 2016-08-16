@@ -4,9 +4,6 @@ return [
     'single' => 'позицію',
     'model' => 'App\Models\Team_peoples_position',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

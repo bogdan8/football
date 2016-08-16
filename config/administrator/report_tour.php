@@ -4,9 +4,6 @@ return [
     'single' => 'тур',
     'model' => 'App\Models\Report_tour',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

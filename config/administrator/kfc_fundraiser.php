@@ -4,17 +4,18 @@ return [
     'single' => 'збір коштів',
     'model' => 'App\Models\Kfc_fundraiser',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],
         'initials' => [
-            'title' => 'Назва',
+            'title' => 'Прізвище імя побатькові',
         ],
         'sum' => [
             'title' => 'Сума',
+        ],
+        'date' => [
+            'title' => 'Дата',
+            'date_format' => 'yy-mm-dd', //optional, will default to this value
         ],
     ],
     'edit_fields' => [
@@ -26,14 +27,14 @@ return [
             'type' => 'text',
             'title' => 'Прізвище імя побатькові',
         ],
+        'sum' => [
+            'type' => 'number',
+            'title' => 'Сума',
+        ],
         'date' => [
             'type' => 'date',
             'title' => 'Дата',
             'date_format' => 'yy-mm-dd', //optional, will default to this value
-        ],
-        'sum' => [
-            'type' => 'number',
-            'title' => 'Сума',
         ],
     ],
     'filters' => array(

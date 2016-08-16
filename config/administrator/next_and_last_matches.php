@@ -4,9 +4,6 @@ return [
     'single' => 'матч',
     'model' => 'App\Models\Next_and_last_matches',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

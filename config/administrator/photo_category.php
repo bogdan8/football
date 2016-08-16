@@ -4,14 +4,15 @@ return [
     'single' => 'категорію',
     'model' => 'App\Models\Photo_category',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],
         'title' => [
             'title' => 'Назва',
+        ],
+        'image' => [
+            'title' => 'Фото',
+            'output' => '<img src="/uploads/photo_category/small/(:value)" />'
         ],
     ],
     'edit_fields' => [

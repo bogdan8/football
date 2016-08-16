@@ -79,9 +79,7 @@ return array(
             'Обговорення' => [
                 'discussion',
             ],
-            'Три описи які є на головній' => [
-                'short_description_index_page'
-            ]
+            'short_description_index_page',
         ],
         'Пожертви' => [
             'donate',

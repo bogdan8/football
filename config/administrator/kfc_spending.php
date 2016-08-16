@@ -4,17 +4,18 @@ return [
     'single' => 'витрати',
     'model' => 'App\Models\Kfc_spending',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],
         'goods_or_services' => [
-            'title' => 'Назва',
+            'title' => 'Товар або послуга',
         ],
         'sum' => [
             'title' => 'Сума',
+        ],
+        'date' => [
+            'title' => 'Дата',
+            'date_format' => 'yy-mm-dd', //optional, will default to this value
         ],
     ],
     'edit_fields' => [
@@ -26,14 +27,14 @@ return [
             'type' => 'text',
             'title' => 'Товар або послуга',
         ],
+        'sum' => [
+            'type' => 'number',
+            'title' => 'Сума',
+        ],
         'date' => [
             'type' => 'date',
             'title' => 'Дата',
             'date_format' => 'yy-mm-dd', //optional, will default to this value
-        ],
-        'sum' => [
-            'type' => 'number',
-            'title' => 'Сума',
         ],
     ],
     'filters' => array(

@@ -4,9 +4,6 @@ return [
     'single' => 'роки',
     'model' => 'App\Models\Kfc_list_of_candidates_year',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

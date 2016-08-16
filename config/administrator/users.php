@@ -4,9 +4,6 @@ return [
     'single' => 'користувача',
     'model' => 'App\User',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'email' => [
             'title' => 'Емайл',
         ],

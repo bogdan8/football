@@ -4,11 +4,11 @@ return [
     'single' => 'рік',
     'model' => 'App\Models\Matches_season',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
+        ],
+        'number_season' => [
+            'title' => 'Рік сезону',
         ],
     ],
     'edit_fields' => [

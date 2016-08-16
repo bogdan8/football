@@ -4,9 +4,6 @@ return [
     'single' => 'місяць',
     'model' => 'App\Models\Browsing_history',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

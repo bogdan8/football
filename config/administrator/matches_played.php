@@ -4,9 +4,6 @@ return [
     'single' => 'матч',
     'model' => 'App\Models\Matches_played',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

@@ -4,9 +4,6 @@ return [
     'single' => 'гравця',
     'model' => 'App\Models\Browsing_history_people_day_in_month_school',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

@@ -4,14 +4,15 @@ return [
     'single' => 'команду',
     'model' => 'App\Models\Team',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],
         'title' => [
             'title' => 'Назва команди',
+        ],
+        'logotype' => [
+            'title' => 'Фото',
+            'output' => '<img src="/uploads/team_logotype/small/(:value)" />'
         ],
     ],
     'edit_fields' => [

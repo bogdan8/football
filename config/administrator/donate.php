@@ -4,11 +4,14 @@ return [
     'single' => 'дані для збирання пожертв',
     'model' => 'App\Models\Donate',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'title' => [
             'title' => 'Назва',
+        ],
+        'collected_money' => [
+            'title' => 'Зібрано грошей',
+        ],
+        'need_money' => [
+            'title' => 'Потрібно всього грошей',
         ],
     ],
     'edit_fields' => [

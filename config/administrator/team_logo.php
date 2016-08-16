@@ -4,11 +4,12 @@ return [
     'single' => 'фото',
     'model' => 'App\Models\Team_logo',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
+        ],
+        'image' => [
+            'title' => 'Фото',
+            'output' => '<img src="/uploads/team_logo_y_18/small/(:value)" />'
         ],
     ],
     'edit_fields' => [

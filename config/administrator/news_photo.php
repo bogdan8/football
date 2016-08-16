@@ -4,11 +4,18 @@ return [
     'single' => 'фото',
     'model' => 'App\Models\News_photo',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
+        ],
+        'title' => [
+            'title' => 'Назва',
+        ],
+        'weight' => [
+            'title' => 'Порядковий №',
+        ],
+        'image' => [
+            'title' => 'Фото',
+            'output' => '<img src="/uploads/news_photos/small/(:value)" />'
         ],
     ],
     'edit_fields' => [

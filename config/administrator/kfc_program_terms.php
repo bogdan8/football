@@ -4,9 +4,6 @@ return [
     'single' => 'програму',
     'model' => 'App\Models\Kfc_program_terms',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

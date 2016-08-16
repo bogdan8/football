@@ -4,14 +4,15 @@ return [
     'single' => 'манданчик',
     'model' => 'App\Models\Platform',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],
         'title' => [
             'title' => 'Назва',
+        ],
+        'image' => [
+            'title' => 'Фото',
+            'output' => '<img src="/uploads/platform/medium/(:value)" />'
         ],
     ],
     'edit_fields' => [
@@ -32,7 +33,7 @@ return [
             'type' => 'image',
             'location' => public_path() . '/uploads/platform/original/',
             'sizes' => [
-                [500, 500, 'auto', public_path() . '/uploads/news/medium/', 100],
+                [500, 500, 'auto', public_path() . '/uploads/platform/medium/', 100],
             ],
         ],
     ],

@@ -4,9 +4,6 @@ return [
     'single' => 'звіт',
     'model' => 'App\Models\Report',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],
@@ -14,7 +11,19 @@ return [
             'title' => 'Опис',
         ],
         'teams' => [
-            'title' => 'Команди (Коршів-Іванівці)',
+            'title' => 'Команди',
+        ],
+        'scheme' => [
+            'title' => 'Схема',
+        ],
+        'coach' => [
+            'title' => 'Тренер',
+        ],
+        'teams_goals' => [
+            'title' => 'Голи команд',
+        ],
+        'best_player' => [
+            'title' => 'Найкращий гравець',
         ],
     ],
     'edit_fields' => [

@@ -4,9 +4,6 @@ return [
     'single' => 'претендента',
     'model' => 'App\Models\Kfc_list_of_candidates_people',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],

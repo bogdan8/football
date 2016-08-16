@@ -4,8 +4,8 @@ return [
     'single' => 'команду',
     'model' => 'App\Models\Next_and_last_teams',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
+        'goals' => [
+            'title' => 'Забиті',
         ],
     ],
     'edit_fields' => [

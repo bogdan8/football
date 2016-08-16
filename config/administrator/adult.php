@@ -4,9 +4,6 @@ return [
     'single' => 'Доросліюнаки',
     'model' => 'App\Models\Adult',
     'columns' => [
-        'id' => [
-            'title' => 'Індифікатор',
-        ],
         'active' => [
             'title' => 'Показувати чи ні',
         ],
