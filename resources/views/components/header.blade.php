@@ -33,12 +33,25 @@
             <ul class="nav navbar-nav">
                 @foreach($menus as $item)
                     @if(count($item->subparagraph) == 0)
-                        <li><a href="{{ $item->url }}">{{$item->title}}</a></li>
+                        @if($item->url == $URL)
+                            <li><a class="nav-li-active" href="{{ $item->url }}">{{$item->title}}</a></li>
+                        @else
+                            <li><a class="nav-li" href="{{ $item->url }}">{{$item->title}}</a></li>
+                        @endif
                     @else
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">{{$item->title}} <span
-                                        class="caret"></span></a>
+                            @if($item->url == '/'.$url_for_dropdown)
+                                <a class="nav-li-active" href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                   role="button"
+                                   aria-haspopup="true" aria-expanded="false">{{$item->title}}
+                                    <span class="caret"></span>
+                                </a>
+                            @else
+                                <a class="nav-li" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">{{$item->title}}
+                                    <span class="caret"></span>
+                                </a>
+                            @endif
                             <ul class="dropdown-menu">
                                 @foreach($item->subparagraph as $subparagraph)
                                     <li><a href="{{$subparagraph->url}}">{{$subparagraph->title}}</a></li>
@@ -53,14 +66,17 @@
 </nav>
 <div class="nav-bar-subparagraph">
     <?php
-    $URL = $_SERVER['REQUEST_URI'];
     $sub_url = substr($URL, 1, 50);
     $nav_url = '/' . stristr($sub_url, '/', true);
     ?>
     @foreach($menus as $item)
         @if($item->url === $nav_url)
             @foreach($item->subparagraph as $subparagraph)
-                <a href="{{$subparagraph->url}}" class="nav-bar-a">{{$subparagraph->title}}</a>
+                @if($URL == $subparagraph->url)
+                    <a class="nav-li-active" href="{{$subparagraph->url}}" class="nav-bar-a">{{$subparagraph->title}}</a>
+                @else
+                    <a href="{{$subparagraph->url}}" class="nav-bar-a">{{$subparagraph->title}}</a>
+                @endif
             @endforeach
         @endif
     @endforeach

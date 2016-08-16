@@ -59,8 +59,8 @@
                                         <input id="name" placeholder="Ваше імя :" required="required"
                                                class="form-control" name="name" type="text">
                                         <br>
-                                        <label for="Ваш текст *:">Ваше текст *:</label>
-                                        <input id="description" placeholder="Ваше імя :" required="required"
+                                        <label for="Ваш текст *:">Ваш текст *:</label>
+                                        <input id="description" placeholder="Ваш текст :" required="required"
                                                class="form-control" name="description" type="text">
                                         <br>
                                         <input class="btn btn-default" value="Коментувати" type="submit">
@@ -94,7 +94,7 @@
             </div>
         @endforeach
     </div>
-    <div class="block-matches center-block">
+    <div class="index-block-matches center-block">
         <div class="block-matches-body">
             <p class="text-center block-index-page-matches-body-tour">
                 {{$next_match->matches_tour->tour}}

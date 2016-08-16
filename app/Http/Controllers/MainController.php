@@ -22,8 +22,10 @@ class MainController extends Controller
         }
         /** Кінець пожертв які потрібні */
 
-        $URL = $_SERVER['REQUEST_URI'];
-        $this->data['url_lang'] = substr($URL, 1, 2);
+        $this->data['URL'] = $_SERVER['REQUEST_URI'];
+        $long_url = substr($this->data['URL'], 1, 10);
+        $small_url = strpos($long_url, '/');
+        $this->data['url_for_dropdown'] = substr($long_url, 0, $small_url);
     }
 
 }

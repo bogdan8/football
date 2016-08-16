@@ -48,11 +48,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php $i = 1; ?>
+                <?php
+                $number = 1;
+                $array = array();
+                ?>
                 @foreach($browsing_history[0]->browsing_history_people_day_in_month as $people)
                     <?php $count = 0; ?>
                     <tr style="width: 100%;">
-                        <th>{{$i++}}</th>
+                        <th>{{$number++}}</th>
                         <th>{{$people->name_people}}</th>
                         @foreach($people->browsing_history_people_day as $day)
                             <th>{{$day->count_visit}}</th>

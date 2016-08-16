@@ -12,8 +12,10 @@
                         <a class="season-link-active"
                            href="/teams/report/season/{{$index->id}}">Сезон {{$index->number_season}}</a>
                     @else
-                        <a class="season-link"
-                           href="/teams/report/season/{{$index->id}}">Сезон {{$index->number_season}}</a>
+                        @if(count($index->report_tour) > 0)
+                            <a class="season-link"
+                               href="/teams/report/season/{{$index->id}}">Сезон {{$index->number_season}}</a>
+                        @endif
                     @endif
                 @endforeach
             </div>

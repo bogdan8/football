@@ -16,6 +16,9 @@ Route::get('gallery/{title}', ['as' => 'gallery.show', 'uses' => 'GalleryControl
 Route::group(
     ['prefix' => 'kfc'],
     function () {
+        Route::get('', function(){
+            return redirect('kfc/fundraiser');
+        });
         Route::get('spending', ['as' => 'spending', 'uses' => 'KfcController@spending']);
         Route::get('fundraiser', ['as' => 'fundraiser', 'uses' => 'KfcController@fundraiser']);
         Route::get('list_of_candidates', ['as' => 'list_of_candidates', 'uses' => 'KfcController@list_of_candidates']);
@@ -39,6 +42,9 @@ Route::group(
 Route::group(
     ['prefix' => 'teams'],
     function () {
+        Route::get('', function(){
+            return redirect('teams/storage');
+        });
         Route::get('storage', ['as' => 'storage', 'uses' => 'TeamsController@storage']);
         Route::get('matches', ['as' => 'matches', 'uses' => 'TeamsController@matches_season']);
         Route::get('standings', ['as' => 'matches', 'uses' => 'TeamsController@standings']);
@@ -56,6 +62,9 @@ Route::group(
 Route::group(
     ['prefix' => 'school'],
     function () {
+        Route::get('', function(){
+            return redirect('school/junior_group');
+        });
         Route::get('junior_group', ['as' => 'junior_group', 'uses' => 'SchoolsController@junior_group']);
         Route::get('senior_group', ['as' => 'senior_group', 'uses' => 'SchoolsController@senior_group']);
         Route::get('junior_group_people/{mounts}', ['as' => 'junior_group_people', 'uses' => 'SchoolsController@junior_group_people']);
