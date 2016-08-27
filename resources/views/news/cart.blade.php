@@ -60,7 +60,7 @@
                                             <div class="modal-header">
                                                 <button type="button" class="close"
                                                         data-dismiss="modal">&times;</button>
-                                                <h4 class="modal-title">Modal Header</h4>
+                                                <h4 class="modal-title">{{$item->title}}</h4>
                                             </div>
                                             <div class="modal-body">
                                                 <img class="cart-news-gallery-photo-modal"
@@ -81,7 +81,7 @@
                                             <div class="modal-header">
                                                 <button type="button" class="close"
                                                         data-dismiss="modal">&times;</button>
-                                                <h4 class="modal-title">Modal Header</h4>
+                                                <h4 class="modal-title">{{$item->title}}</h4>
                                             </div>
                                             <div class="modal-body">
                                                 <img class="cart-news-gallery-photo-modal"

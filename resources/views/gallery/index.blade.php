@@ -6,6 +6,7 @@
                 <b class="body-header-block-title-first">ГАЛЕРЕЯ</b>
             </div>
             <br>
+
             <div class="row">
                 <b class="body-header-block-title-second">МЕДИА</b>
             </div>
@@ -14,22 +15,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
-                    <img class="index-photo-big" src="/uploads/gallery/medium/{{$all_photo[0]->image}}"/>
+                    @if(!empty($all_photo[0]->image))
+                        <img class="index-photo-big" src="/uploads/gallery/medium/{{$all_photo[0]->image}}"/>
 
-                    <div class="index-photo-description-big">
-                        <p class="index-photo-description-count">{{count($all_photo)}}</p>
-                        <a class="index-photo-description-link"
-                           href="/gallery/all_photo">ВСІ ФОТОГРАФІЇ</a>
-                    </div>
+                        <div class="index-photo-description-big">
+                            <p class="index-photo-description-count">{{count($all_photo)}}</p>
+                            <a class="index-photo-description-link"
+                               href="/gallery/all_photo">ВСІ ФОТОГРАФІЇ</a>
+                        </div>
+                    @else
+                        <img class="index-photo-big" src="{{$all_photo[0]->image_url }}"/>
+
+                        <div class="index-photo-description-big">
+                            <p class="index-photo-description-count">{{count($all_photo)}}</p>
+                            <a class="index-photo-description-link"
+                               href="/gallery/all_photo">ВСІ ФОТОГРАФІЇ</a>
+                        </div>
+                    @endif
                 </div>
                 <div class="col-lg-5">
                     <div class="col-lg-12 index-photo-block-right" style="margin-top: 25px;">
                         @if(!empty($photo_category[0]->image))
                             <img class="index-photo-right"
                                  src="/uploads/photo_category/medium/{{$photo_category[0]->image}}"/>
-                        @endif
-                        @if(!empty($photo_category[0]->image_url))
-                            <img class="index-photo-right" src="{!! $photo_category[0]->image_url !!}"/>
                         @endif
                         <div class="index-photo-description">
                             <p class="index-photo-description-count">{{count($photo_category[0]->gallery)}}</p>

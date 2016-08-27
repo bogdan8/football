@@ -15,7 +15,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-7">
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
                 <div class="list-candidates-block">
                     <div class="list-candidates-block-people">
                         <?php $i = 1; ?>
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                 <div class="list-candidates-block-years">
                     @foreach($candidates_year_all as $item)
                         @if($item->years == $candidates_year->years)

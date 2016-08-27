@@ -12,6 +12,10 @@ a {
 }
 
 /* Header */
+.navbar-nav > li {
+    float: left;
+}
+
 .header-block-raising-money-for-playground {
     height: 130px;
     width: 100%;
@@ -33,6 +37,16 @@ a {
     font-size: 20px;
     margin-top: -68px;
     margin-left: 17%;
+}
+
+@media(max-width: 500px) {
+    .header-block-raising-money-for-playground-title b {
+        position: absolute;
+        color: #698DAD;
+        font-size: 15px;
+        margin-top: -68px;
+        margin-left: 50%;
+    }
 }
 
 .header-block-raising-money-for-playground-interest {
@@ -164,6 +178,7 @@ a {
     color: #666666;
     font-size: 18px;
     margin-left: 50px;
+    width: 100%;
 }
 
 .body-header-block-title-second {
@@ -279,7 +294,7 @@ a {
 
 .comments-show {
     margin-top: 5px;
-    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
 }
 
 .comments-show-name {
@@ -430,6 +445,16 @@ a {
     padding-left: 20px;
 }
 
+@media (max-width: 600px) {
+    .block-index-page-matches-body-team-one p {
+        font-weight: 600;
+        font-size: 20px;
+        color: black;
+        padding-top: 20px;
+        padding-left: 5px;
+    }
+}
+
 .block-index-page-matches-body-team-one img {
     width: 100px;
     height: 100px;
@@ -481,6 +506,17 @@ a {
     float: right;
 }
 
+@media (max-width: 600px) {
+    .block-index-page-matches-body-team-two p {
+        font-weight: 600;
+        font-size: 20px;
+        color: black;
+        padding-top: 20px;
+        padding-right: 5px;
+        float: right;
+    }
+}
+
 .block-index-page-matches-body-team-two img {
     width: 100px;
     height: 100px;
@@ -527,7 +563,7 @@ a {
     height: 50px;
     margin-top: -50px;
     position: absolute;
-    width: 74%;
+    width: 75.5%;
 }
 
 .index-photo-description-in-block {
@@ -682,6 +718,11 @@ a {
     margin-left: -50px;
 }
 
+@media(max-width: 11000px) {
+    .list-candidates-block-year-active {
+        width: 400px;
+    }
+}
 .list-candidates-block-year {
     width: 500px;
     height: 50px;
@@ -1504,6 +1545,7 @@ a {
 
 .footer {
     height: 330px;
+    min-width: 1000px;
 }
 
 .footer-block {

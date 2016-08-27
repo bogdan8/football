@@ -2,34 +2,36 @@
     <div class="header-block-raising-money-for-playground-title">
         <b>КОРШІВСЬКИЙ ФУТБОЛЬНИЙ СОЮЗ</b>
     </div>
-    <div class="header-block-raising-money-for-playground-interest">
-        <div class="header-block-raising-money-for-playground-interest-title">
-            <b>Збір грошей на спортивний майданчик</b>
-        </div>
-        <div class="header-block-raising-money-for-playground-interest-value">
-            <b>{{ substr($interest, 0, 4)}}%</b>
+    @if($donate)
+        <div class="header-block-raising-money-for-playground-interest">
+            <div class="header-block-raising-money-for-playground-interest-title">
+                <b>{{$donate->title}}</b>
+            </div>
+            <div class="header-block-raising-money-for-playground-interest-value">
+                <b>{{ substr($interest, 0, 4)}}%</b>
 
-            <div class="header-block-raising-money-for-playground-interest-value-line"
-                 style="width: {{ substr($interest, 0, 4)}}%">
+                <div class="header-block-raising-money-for-playground-interest-value-line"
+                     style="width: {{ substr($interest, 0, 4)}}%">
+                </div>
+            </div>
+            <div class="header-block-raising-money-for-playground-bottom">
+                <p class="header-block-raising-money-for-playground-collected">
+                    Зібрано {{$donate->collected_money}} грн
+                </p>
+
+                <p class="separate-slash">|</p>
+
+                <p class="header-block-raising-money-for-playground-collected">
+                    Потрібна сума {{$donate->need_money}} грн
+                </p>
             </div>
         </div>
-        <div class="header-block-raising-money-for-playground-bottom">
-            <p class="header-block-raising-money-for-playground-collected">
-                Зібрано {{$donate->collected_money}} грн
-            </p>
-
-            <p class="separate-slash">|</p>
-
-            <p class="header-block-raising-money-for-playground-collected">
-                Потрібна сума {{$donate->need_money}} грн
-            </p>
-        </div>
-    </div>
-    <img src="/images/header/emblema.jpg" class="header-logo ">
+    @endif
+    <a href="/"><img src="/images/header/emblema.jpg" class="header-logo "></a>
 </div>
 <nav class="nav-bar">
     <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 @foreach($menus as $item)
                     @if(count($item->subparagraph) == 0)
@@ -73,7 +75,8 @@
         @if($item->url === $nav_url)
             @foreach($item->subparagraph as $subparagraph)
                 @if($URL == $subparagraph->url)
-                    <a class="nav-li-active" href="{{$subparagraph->url}}" class="nav-bar-a">{{$subparagraph->title}}</a>
+                    <a class="nav-li-active" href="{{$subparagraph->url}}"
+                       class="nav-bar-a">{{$subparagraph->title}}</a>
                 @else
                     <a href="{{$subparagraph->url}}" class="nav-bar-a">{{$subparagraph->title}}</a>
                 @endif

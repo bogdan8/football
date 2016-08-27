@@ -32,9 +32,15 @@
                     </a>
 
                     <p>Журнал відвідування за {{$date}}</p>
-                    <a class="" href="/school/senior_group_people/{{$browsing_history[1]->date_visit}}">
-                        >
-                    </a>
+                    @if(isset($browsing_history[1]))
+                        <a href="/school/senior_group_people/{{$browsing_history[1]->date_visit}}">
+                            >
+                        </a>
+                    @else
+                        <a>
+                            >
+                        </a>
+                    @endif
                 </div>
                 <thead>
                 <tr style="width: 100%;">
