@@ -70,6 +70,7 @@ return array(
             'menus',
             'subparagraph',
             'users',
+            'index_logo'
         ],
         'Статі' => [
             'Статі' => [

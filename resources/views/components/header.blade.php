@@ -27,7 +27,7 @@
             </div>
         </div>
     @endif
-    <a href="/"><img src="/images/header/emblema.jpg" class="header-logo "></a>
+    <a href="/"><img src="/images/header/emblema.jpg" class="header-logo"></a>
 </div>
 <nav class="nav-bar">
     <div class="container-fluid">

@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Models\Index_logo;
 use App\Models\Next_and_last_matches;
 use App\Models\Short_description_index_page;
 use Illuminate\Http\Request;
@@ -11,7 +12,7 @@ use App\Models\Discussion_comments;
 class IndexController extends MainController
 {
 
-    public function index(News $news, Donate_people $people, Discussion $discussion, Next_and_last_matches $next_and_last_matches, Short_description_index_page $index_page, Request $request)
+    public function index(News $news, Donate_people $people, Discussion $discussion, Next_and_last_matches $next_and_last_matches, Short_description_index_page $index_page, Index_logo $index_logo, Request $request)
     {
         if ($request->has('description')) {
             $discussion_comments = new Discussion_comments();
@@ -37,6 +38,9 @@ class IndexController extends MainController
         /** Кінець наступний матч і попередній */
         /** Короткий опис */
         $this->data['short_description_index_page'] = $index_page->getActive();
+        /** Фото **/
+        $this->data['index_logo'] = $index_logo->firstActive();
+        /** Кінець фото **/
 
         return view('pages.index', $this->data);
     }

@@ -15,7 +15,7 @@
         </div>
         <div class="container body-header-block-image">
             <div class="row">
-                <img src="/images/body/stadion.png" class="body-header-image">
+                <img src="/uploads/index_logo/original/{{$index_logo->image}}" class="body-header-image">
             </div>
         </div>
     </div>
@@ -136,9 +136,7 @@
     </div>
     @if($next_match)
         <br>
-        <div style="margin-left: 37%;">
-        <b class="body-discussion-block-title-first text-center">НАСТУПНИЙ МАТЧ</b>
-        </div>
+        <b class="body-discussion-block-title-first">НАСТУПНИЙ МАТЧ</b>
         <div class="index-block-matches center-block">
             <div class="block-matches-body">
                 <p class="text-center block-index-page-matches-body-tour">
@@ -170,7 +168,6 @@
                 </div>
             </div>
         </div>
-        <br>
-        <br>
+
     @endif
 @stop
