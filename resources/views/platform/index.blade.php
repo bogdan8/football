@@ -38,14 +38,6 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="platform-show-images">
-                @if(!empty($platform_photos[0]))
-                    <img src="/uploads/platform_photos/original/{{$platform_photos[0]->image}}"
-                         class="platform-body-first-image">
-                @endif
-            </div>
-        </div>
-        <div class="row">
             <div class="platform-show-all-images">
                 @foreach($platform_photos as $photo)
                     <div class="col-lg-4">

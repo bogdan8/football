@@ -46,12 +46,12 @@
                             </thead>
                             <tbody>
                             <?php $i = 1; ?>
-                            @foreach($season_one->standings as $standings)
+                            @foreach($standings as $standings)
                                 <tr>
                                     <th width="5%">{{$i++}}</th>
                                     <th width="40%">
                                         <img class="teams-images-logo-small"
-                                             src="/uploads/team_logotype/small/{{$next_matches->next_and_last_teams[0]->team->logotype}}"/>
+                                             src="/uploads/team_logotype/original/{{$standings->team->logotype}}"/>
                                         {{$standings->team->title}}
                                     </th>
                                     <th width="5%" style="text-align: center">

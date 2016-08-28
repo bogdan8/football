@@ -39,7 +39,7 @@ a {
     margin-left: 17%;
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     .header-block-raising-money-for-playground-title b {
         position: absolute;
         color: #698DAD;
@@ -718,11 +718,12 @@ a {
     margin-left: -50px;
 }
 
-@media(max-width: 11000px) {
+@media (max-width: 11000px) {
     .list-candidates-block-year-active {
         width: 400px;
     }
 }
+
 .list-candidates-block-year {
     width: 500px;
     height: 50px;
@@ -1499,8 +1500,15 @@ a {
 }
 
 .footer-block-left {
-    margin-left: 100px;
-    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.footer-left-line {
+    background-color: white;
+    width: 2px;
+    height: 130px;
+    margin-top: -140px;
+    margin-left: 130px;
 }
 
 .footer-block-center {
@@ -1538,8 +1546,8 @@ a {
 }
 
 .footer-emblema {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
 }
 
@@ -1550,6 +1558,12 @@ a {
 
 .footer-block {
     margin-top: -180px;
+}
+
+.footer-nav-a a {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 /* End Footer */

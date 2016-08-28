@@ -135,6 +135,10 @@
         @endif
     </div>
     @if($next_match)
+        <br>
+        <div style="margin-left: 37%;">
+        <b class="body-discussion-block-title-first text-center">НАСТУПНИЙ МАТЧ</b>
+        </div>
         <div class="index-block-matches center-block">
             <div class="block-matches-body">
                 <p class="text-center block-index-page-matches-body-tour">
@@ -166,5 +170,7 @@
                 </div>
             </div>
         </div>
+        <br>
+        <br>
     @endif
 @stop

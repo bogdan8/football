@@ -6,6 +6,7 @@ use App\Models\Matches_season;
 use App\Models\Next_and_last_matches;
 use App\Models\Racing_circles;
 use App\Models\Report_tour;
+use App\Models\Standings;
 use App\Models\Team_logo;
 use App\Models\Team_peoples_position;
 
@@ -20,19 +21,21 @@ class TeamsController extends MainController
         return view('teams.storage', $this->data);
     }
 
-    public function standings(Matches_season $season, Next_and_last_matches $next_and_last_matches)
+    public function standings(Matches_season $season, Next_and_last_matches $next_and_last_matches, Standings $standings)
     {
         $this->data['next_matches'] = $next_and_last_matches->getNext();
         $this->data['season'] = $season->getActive();
+        $this->data['standings'] = $standings->firstSeason($this->data['season'][0]->id);
 
         return view('teams.standings', $this->data);
     }
 
-    public function standings_season($id, Matches_season $season, Next_and_last_matches $next_and_last_matches)
+    public function standings_season($id, Matches_season $season, Next_and_last_matches $next_and_last_matches, Standings $standings)
     {
         $this->data['next_matches'] = $next_and_last_matches->getNext();
         $this->data['season'] = $season->getActive();
         $this->data['season_one'] = $season->find($id);
+        $this->data['standings'] = $standings->firstSeason($this->data['season'][0]->id);
 
         return view('teams.standings_season', $this->data);
     }

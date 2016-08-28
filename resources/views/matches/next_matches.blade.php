@@ -7,7 +7,7 @@
 
         <div class="block-index-page-matches-body-team-one">
             <p>{{$next_matches->next_and_last_teams[0]->team->title}}</p>
-            <img src="/uploads/team_logotype/small/{{$next_matches->next_and_last_teams[0]->team->logotype}}"/>
+            <img src="/uploads/team_logotype/original/{{$next_matches->next_and_last_teams[0]->team->logotype}}"/>
 
         </div>
 
@@ -24,7 +24,7 @@
         </div>
         <div class="block-index-page-matches-body-team-two">
             <p>{{$next_matches->next_and_last_teams[1]->team->title}}</p>
-            <img src="/uploads/team_logotype/small/{{$next_matches->next_and_last_teams[1]->team->logotype}}"/>
+            <img src="/uploads/team_logotype/original/{{$next_matches->next_and_last_teams[1]->team->logotype}}"/>
         </div>
     </div>
 </div>
