@@ -17,21 +17,16 @@
             </div>
             <br>
         </div>
-        <div class="container body-header-block-image platform-header-image-block">
-            <div class="row">
-                <img src="/uploads/platform/original/{{$platform->image}}" class="platform-header-image">
-            </div>
+        <div class="body-header-block-image platform-header-image-block">
+            <img src="/uploads/platform/original/{{$platform->image}}" class="platform-header-image">
+
             <div class="platform-header-description">
                 <p class="platform-header-description-title">
                     {{$platform->title}}
                 </p>
 
                 <div class="platform-header-description-description">
-                    <?php
-                    $descript = substr($platform->description, 0, 500);
-                    $text = substr($descript, 0, strrpos($descript, ' '));
-                    ?>
-                    {!! $text !!}...
+                    {!! $platform->description !!}
                 </div>
             </div>
         </div>

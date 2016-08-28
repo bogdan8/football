@@ -25,7 +25,7 @@
                             '09' => 'Вересень', '10' => 'Жовтень', '11' => 'Листопад', '12' => 'Грудень'
                     );
                     $monthes_number = date_create($browsing_history_mounts->date_visit)->Format('m');
-                    $date = $monthes[$monthes_number] . date_create($browsing_history_mounts->date_visit)->Format('Y');
+                    $date = $monthes[$monthes_number] .' '. date_create($browsing_history_mounts->date_visit)->Format('Y');
                     $month = date_create($browsing_history_mounts->date_visit)->Format('m');
                     $is_nul = substr($month, 0, 1);
                     if ($is_nul == 0) {

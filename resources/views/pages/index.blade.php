@@ -13,10 +13,8 @@
             <br>
 
         </div>
-        <div class="container body-header-block-image">
-            <div class="row">
-                <img src="/uploads/index_logo/original/{{$index_logo->image}}" class="body-header-image">
-            </div>
+        <div class="body-header-block-image">
+            <img src="/uploads/index_logo/original/{{$index_logo->image}}" class="body-header-image">
         </div>
     </div>
     <div class="body-discussion-block">
@@ -168,6 +166,6 @@
                 </div>
             </div>
         </div>
-
+        <br><br>
     @endif
 @stop

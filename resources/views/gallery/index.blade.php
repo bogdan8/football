@@ -8,7 +8,7 @@
             <br>
 
             <div class="row">
-                <b class="body-header-block-title-second">МЕДИА</b>
+                <b class="body-header-block-title-second">ФОТО</b>
             </div>
             <br>
         </div>

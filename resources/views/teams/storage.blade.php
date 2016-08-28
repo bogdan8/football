@@ -13,11 +13,9 @@
         </div>
         <br>
 
-        <div class="container body-header-block-image">
-            <div class="row">
-                <div class="storage-header-image-block">
-                    <img src="/uploads/team_logo_y_18/original/{{$team_logo->image}}" class="storage-header-image">
-                </div>
+        <div class="body-header-block-image">
+            <div class="storage-header-image-block">
+                <img src="/uploads/team_logo_y_18/original/{{$team_logo->image}}" class="storage-header-image">
             </div>
         </div>
     </div>
@@ -68,9 +66,9 @@
                                             </div>
                                         </td>
                                         <td style="text-align: left;">
-                                            <p>Прізвище: {{$info->last_name}}</p>
+                                            <p>{{$info->last_name}}</p>
 
-                                            <p>Ім'я: {{$info->name}}</p>
+                                            <p>{{$info->name}}</p>
                                         </td>
                                         <td>
                                             <p>{{$info->date_of_birth}}</p>
@@ -93,9 +91,9 @@
                                             </div>
                                         </td>
                                         <td style="text-align: left;">
-                                            <p>Прізвище: {{$info->last_name}}</p>
+                                            <p>{{$info->last_name}}</p>
 
-                                            <p>Ім'я: {{$info->name}}</p>
+                                            <p>{{$info->name}}</p>
                                         </td>
                                         <td>
                                             <p>{{$info->date_of_birth}}</p>
